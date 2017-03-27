@@ -1,0 +1,151 @@
+/**
+ * Class containing formatted elements
+ **/
+
+.entry {
+
+ 	&__image{
+		padding-top: 0;
+		width: 100%;
+	  @include mq(md){
+		transform: translateY(-30%);
+		}
+		&-me{
+			border: .6rem solid $gray-light;
+			transition: 1s ease all;
+			@include mq(md){
+			opacity: .4;
+			transform: translateY(-20%);
+			&:hover{
+				opacity: 1;
+			}
+
+			}
+		}
+
+
+	}
+	/**
+	 * Headings
+	 **/
+
+	h1, h2, h3, h4, h5, h6 {
+		padding-top: 1rem;
+		margin-bottom: .5rem;
+		color: inherit;
+	}
+
+
+	/**
+	 * Paragraphs and lists
+	 **/
+
+	p,
+	ol,
+	ul {
+		padding-top: .5rem;
+		margin-bottom: 1rem;
+	}
+
+	ul,
+	ol {
+		padding-left: 3rem;
+	}
+
+	ol {
+		list-style: decimal;
+	}
+
+	ul {
+		list-style: disc;
+	}
+
+
+	/**
+	 * Tables
+	 **/
+
+	.table-wrapper {
+		-webkit-overflow-scroll: touch;
+		overflow-x: auto;
+	}
+
+	table {
+		width: 100%;
+
+		tbody {
+			tr {
+				background: #000;
+				color: #fff;
+
+				&:nth-child(odd) {
+					background: #f00;
+				}
+			}
+		}
+
+		td,
+		th {
+			padding: .5rem;
+			text-align: left;
+		}
+
+		th {
+			font-weight: bold;
+		}
+	}
+
+
+	/**
+	 * Blockquote
+	 **/
+
+	blockquote {
+		margin-top: .5rem;
+		position: relative;
+		padding-left: 3rem;
+
+		&::before {
+			@extend %icon;
+			content: '\f10d';
+			position: absolute;
+			top: .5rem;
+			left: 0;
+			font-size: 2rem;
+			color: #f00;
+		}
+
+		p {
+			font-size: 1.25em;
+			font-style: italic;
+		}
+	}
+
+
+	/**
+	 * WordPress core classes
+	 **/
+
+	.alignnone {
+		padding-top: .5rem;
+		margin-bottom: 1.5rem;
+	}
+
+	.aligncenter {
+		display: block;
+		padding-top: .5rem;
+		margin-right: auto;
+		margin-bottom: 1.5rem;
+		margin-left: auto;
+	}
+
+	.alignright {
+		float: right;
+		margin: .5rem 0 1.5rem 1.5rem;
+	}
+
+	.alignleft {
+		float: left;
+		margin: .5rem 1.5rem 1.5rem 0;
+	}
+}

@@ -1,0 +1,66 @@
+/**
+ * Responsive visibility
+ * ================================================== */ 
+
+// Visible
+.visible {
+	&-xs {
+		display: none !important;
+
+		@include mq($until: sm) {
+			display: block !important;
+		}
+	}
+
+	&-sm {
+		display: none !important;
+
+		@include mq($from: sm, $until: md) {
+			display: block !important;
+		}
+	}
+
+	&-md {
+		display: none !important;
+
+		@include mq($from: md, $until: lg) {
+			display: block !important;
+		}
+	}
+
+	&-lg {
+		display: none !important;
+
+		@include mq(lg) {
+			display: block !important;
+		}
+	}
+}
+
+
+// Hidden
+.hidden {
+	&-xs {
+		@include mq($until: sm) {
+			display: none !important;
+		}
+	}
+
+	&-sm {
+		@include mq($from: sm, $until: md) {
+			display: none !important;
+		}
+	}
+
+	&-md {
+		@include mq($from: md, $until: lg) {
+			display: none !important;
+		}
+	}
+
+	&-lg {
+		@include mq(lg) {
+			display: none !important;
+		}
+	}
+}

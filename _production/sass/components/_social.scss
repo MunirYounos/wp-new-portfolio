@@ -1,0 +1,20 @@
+/**
+ * Share and like buttons
+ **/ 
+
+.share,
+.like {
+	text-align: left;
+	height: 2rem;
+
+	&__button {
+		line-height: 2rem;
+		height: inherit;
+		display: inline-block;
+		vertical-align: middle;
+
+		& + & {
+			margin-left: 1rem;
+		}
+	}
+}

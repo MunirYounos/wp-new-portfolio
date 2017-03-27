@@ -1,0 +1,47 @@
+/**
+ * FontAwesome icons placeholder
+ **/ 
+
+%icon {
+	display: inline-block;
+	vertical-align: middle;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	font-size: inherit;
+	line-height: inherit;
+	font-family: FontAwesome;
+	text-rendering: auto;
+	speak: none;
+	text-transform: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	transform: translate(0,0);
+}
+
+
+/**
+ * Invisible text
+ **/ 
+
+@mixin ir() {
+	font: 0/0 a;
+	color: transparent;
+	text-shadow: none;
+}
+
+
+/**
+ * Screen reader
+ **/ 
+
+@mixin sr() {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}

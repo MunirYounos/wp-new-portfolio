@@ -1,0 +1,59 @@
+/**
+ * Flexbox helpers
+ **/ 
+
+.flex {
+	display: flex;
+
+	&--justify {
+		justify-content: space-between;
+	}
+
+	&--equal {
+		flex-wrap: wrap;
+	}
+
+	&--center {
+		justify-content: center;
+		align-items: center;
+	}
+
+	&--v-center {
+		align-items: center;
+	}
+}
+
+
+/**
+ * Clearfix
+ **/ 
+
+.clearfix {
+	@include clearfix;
+}
+
+
+/**
+ * Padding helpers
+ **/ 
+
+.no-gutter {
+	padding-right: 0 !important;
+	padding-left: 0 !important;
+}
+
+.padding {
+	
+	&--none {
+		padding-top: 0 !important;
+		padding-bottom: 0 !important;
+	}
+
+	&--top {
+		padding-bottom: 0 !important;
+	}
+
+	&--bottom {
+		padding-top: 0 !important;
+	}
+}

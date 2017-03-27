@@ -1,0 +1,43 @@
+// Defines acpect ratio from given width and height
+
+// @param  {length} $width - Initial width
+// @param  {length} $height - Initial height
+// @param  {filename} $url ['logo.svg'] - Filename of the image
+// @param  {length} $xs [''] - width of the image at xs
+// @param  {length} $sm [''] - width of the image at sm
+// @param  {length} $md [''] - width of the image at md
+// @param  {length} $lg [''] - width of the image at lg
+
+@mixin acpect_ratio($width, $height, $url:'toplogo.png', $xs:'', $sm:'', $md:'', $lg:'') {
+
+	$ratio: $height/$width;
+
+  background-image: url('../images/#{$url}');
+
+	width: $width;
+	height: $width * $ratio;
+  @if ($xs != ''){
+    @include mq($until: sm){
+      width: $xs;
+      height: $xs * $ratio;
+    }
+  }
+  @if ($sm != ''){
+    @include mq(sm, md){
+      width: $sm;
+      height: $sm * $ratio;
+    }
+  }
+  @if ($md != ''){
+    @include mq(md, lg){
+      width: $md;
+      height: $md * $ratio;
+    }
+  }
+  @if ($lg != ''){
+    @include mq(lg){
+      width: $lg;
+      height: $lg * $ratio;
+    }
+  }
+}

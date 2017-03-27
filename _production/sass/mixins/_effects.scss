@@ -1,0 +1,89 @@
+/**
+ * Overlay
+ **/
+
+@mixin overlay($background: rgba(#000, .5)) {
+	position: relative;
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: $background;
+	}
+}
+
+
+/**
+ * Gallery overlay
+ **/
+
+@mixin gallery-overlay($background: rgba(#000, .5), $icon: '\f00e', $color: #fff, $font-size: 2rem) {
+	display: block;
+	position: relative;
+
+	&:hover {
+		&:before,
+		&:after {
+			opacity: 1;
+		}
+	}
+
+	&:before,
+	&:after {
+		position: absolute;
+		opacity: 0;
+		transition: all .3s ease;
+	}
+
+	&:before {
+		content: '';
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: $background;
+		z-index: 1;
+	}
+
+	&:after {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		content: $icon;
+		font-size: $font-size;
+		color: $color;
+		font-family: FontAwesome;
+		z-index: 2;
+	}
+}
+
+/**
+ * Button background-color with hover and active based on color given
+ **/
+
+@mixin button-bg($bg, $hover: 8%) {
+  background: $bg;
+  transition: all 0.3s ease;
+  &:hover {
+    background:darken($bg,$hover);
+
+  }
+  &:active {
+    background:darken($bg,$hover + $hover/2);
+  }
+}
+
+
+/**
+ * Image backgrounds
+ **/
+
+@mixin bg-size($size: cover, $position: center center) {
+	background-position: $position;
+	background-repeat: no-repeat;
+	background-size: $size;
+}

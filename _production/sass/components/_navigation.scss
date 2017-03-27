@@ -1,0 +1,206 @@
+/**
+ * Navigation
+ **/
+$nav-header-height: 9.7rem;
+$nav-dropdown-bg: $cream;
+$nav-mobile-bg: $gray-light;
+$nav-mobile-dropdown-bg: $cream;
+
+
+.nav {
+
+	&__list {
+		list-style: none;
+	}
+
+	&__item {
+		position: relative;
+
+		@include mq(sm) {
+			float: left;
+		}
+	}
+
+	&__link {
+		display: block;
+		padding: 1.5rem;
+		line-height: 1;
+		white-space: nowrap;
+		color: $white;
+		font-size: 1.4rem;
+		font-weight: 700;
+		text-transform: uppercase;
+
+		@include mq(sm) {
+			padding: 1rem 2.5rem;
+			margin-left: 1.5rem;
+
+			&:after{
+				content: '';
+				position: absolute;
+				top: 80%;
+				left: 3.5rem;
+				background: $white;
+				width: calc(100% - 5.3rem);
+				height: .2rem;
+				transition: .6s ease all;
+				transform: scale(0);
+			}
+		}
+
+		// Active/hover state
+		.is-active > &,
+		&:hover {
+			@include mq($until: sm) {
+				background: $white;
+				color: $gray;
+			}
+
+			@include mq(sm) {
+				&:after{
+					transform: scale(1);
+				}
+			}
+		}
+
+		// Dropdown caret
+		&-caret {
+			display: inline-block;
+			margin-left: .3rem;
+
+			&::before {
+				content: '\f107';
+				@extend %icon;
+			}
+		}
+	}
+
+	// Dropdown
+	&__dropdown {
+		display: none;
+		list-style: none;
+		background-color: $nav-mobile-dropdown-bg;
+
+		@include mq(sm) {
+			position: absolute;
+			z-index: 9999;
+			top: 100%;
+			left: 0;
+			min-width: 100%;
+			background-color: $nav-dropdown-bg;
+		}
+
+		// Open state
+		.is-open > & {
+			display: block;
+		}
+
+		// Child items
+		.nav__item {
+			float: none;
+		}
+	}
+
+
+
+	/**
+	 * Mobile menu panel
+	 **/
+
+	&--mobile {
+		@include mq($until: sm) {
+			position: fixed;
+			z-index: 8888;
+			top: $nav-header-height;
+			left: 0;
+			height: calc(100% - #{$nav-header-height});
+			width: 100%;
+			transform: translateX(-100%);
+			transition: all .3s ease;
+			background: $gray-light;
+			overflow-y: auto;
+			-webkit-overflow-scrolling: touch;
+
+			&.is-open {
+				transform: translateX(0);
+			}
+
+			// Set body to fixed
+			@at-root {
+				body.is-fixed {
+					overflow: hidden;
+					position: fixed;
+					width: 100%;
+					height: 100%;
+				}
+			}
+		}
+	}
+
+
+
+	/**
+	 * Mobile menu toggle
+	 **/
+
+	&-toggle {
+		display: block;
+		position: absolute;
+		z-index: 9999;
+		top: 50%;
+		right: 1.5rem;
+		transform: translateY(-49.9%);
+		padding-top: 1.1rem;
+		padding-bottom: 1.1rem;
+		cursor: pointer;
+
+
+		&__label {
+			display: inline-block;
+			color: $toggle-label-color;
+		}
+
+		&__icon {
+			position: relative;
+			display: inline-block;
+			vertical-align: middle;
+			width: $toggle-width;
+			height: $toggle-height;
+			background: $toggle-bg;
+			transition: all .3s ease;
+
+			&::before,
+			&::after {
+				content: '';
+				display: block;
+				position: absolute;
+				width: 100%;
+				height: $toggle-height;
+				background: $toggle-bg;
+				transition: all .3s ease;
+			}
+
+			&::before {
+				bottom: -.7rem;
+			}
+
+			&::after {
+				top: -.7rem;
+			}
+
+			body.is-fixed & {
+				background: transparent;
+
+				&::before {
+					top: 0;
+					transform: rotate(45deg);
+				}
+
+				&::after {
+					top: 0;
+					transform: rotate(-45deg);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,35 @@
+/**
+ * Site header
+ **/
+
+.header {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+padding-top: 2rem;
+padding-bottom: 2rem;
+z-index: 50;
+
+@include mq(sm) {
+	padding-top: 4rem;
+	padding-bottom: 4rem;
+}
+
+&__wrapper {
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+	&__logo {
+		float: left;
+		display: block;
+		text-align: center;
+
+
+		// acpect_ratio($width, $height, $url:'logo.svg', $xs:'', $sm:'', $md:'', $lg:'')
+		@include acpect_ratio( 20rem, 8rem, $xs:18rem/1 );
+		@include bg-size(contain);
+	}
+}

@@ -1,0 +1,93 @@
+/**
+ * Clearfix
+ **/ 
+
+@mixin clearfix() {
+	&:before,
+	&:after {
+		content: '';
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+
+/**
+ * Center block horizontally
+ **/ 
+
+@mixin center-block {
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+/**
+ * Margins
+ **/
+
+// Shorthand for top and bottom margin
+@mixin margin-vertical($top: 10rem, $bottom: $top) {
+	margin-top: $top;
+	margin-bottom: $top;
+}
+
+
+// Breakpoint specific vertical margin
+@mixin mq-margin-vertical($default: 3rem, $xs: $default, $sm: 5rem, $md: 7rem, $lg: 9rem) {
+	
+	@include margin-vertical($default);
+
+	@include mq(xs) {
+		@include margin-vertical($xs);
+	}
+
+	@include mq(sm) {
+		@include margin-vertical($sm);
+	}
+
+	@include mq(md) {
+		@include margin-vertical($md);
+	}
+
+	@include mq(lg) {
+		@include margin-vertical($lg);
+	}
+}
+
+
+/**
+ * Paddings
+ **/
+
+// Shorthand for top and bottom padding
+@mixin padding-vertical($top: 10rem, $bottom: $top) {
+	padding-top: $top;
+	padding-bottom: $top;
+}
+
+
+// Breakpoint specific vertical padding
+@mixin mq-padding-vertical($default: 3rem, $xs: $default, $sm: 5rem, $md: 7rem, $lg: 9rem) {
+	
+	@include padding-vertical($default);
+
+	@include mq(xs) {
+		@include padding-vertical($xs);
+	}
+
+	@include mq(sm) {
+		@include padding-vertical($sm);
+	}
+
+	@include mq(md) {
+		@include padding-vertical($md);
+	}
+
+	@include mq(lg) {
+		@include padding-vertical($lg);
+	}
+}

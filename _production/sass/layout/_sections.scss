@@ -1,0 +1,83 @@
+/**
+ * Sections
+ **/
+
+.section {
+
+	/**
+	 * Colour themes
+	 **/
+
+	@each $modifier, $map in $section-themes {
+		$bg: map-get($map, bg);
+		$color: map-get($map, color);
+		$header-color: map-get($map, header-color);
+		&--#{$modifier} {
+			background-color: $bg;
+			color: $color;
+			h1,h2,h3,h4,h5,h6{
+				color: $header-color;
+			}
+		}
+	}
+
+
+	/**
+	 * Sizes
+	 **/
+
+	&--s {
+		@include padding-vertical(3rem);
+	}
+
+	&--m {
+		@include mq-padding-vertical(
+			$default: 3rem,
+			$sm: 4rem,
+			$md: 6rem,
+			$lg: 7rem
+		);
+	}
+
+	&--l {
+		@include mq-padding-vertical(
+			$default: 3rem,
+			$sm: 5rem,
+			$md: 7rem,
+			$lg: 9rem
+		);
+	}
+
+
+	/**
+	 * Elements
+	 **/
+
+	&__container {
+
+	}
+
+	&__row {
+
+	}
+
+	&__title {
+		font-size: 3rem;
+		text-transform: uppercase;
+		font-weight: 700;
+		padding-bottom: 3rem;
+		&--col {
+			font-size: 2.5rem;
+			text-transform: uppercase;
+			font-weight: 700;
+			padding-bottom: 1.5rem;
+
+
+		}
+	}
+
+	&__col {
+
+
+	}
+}

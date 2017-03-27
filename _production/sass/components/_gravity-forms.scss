@@ -1,0 +1,190 @@
+/**
+ * Gravity forms
+ **/
+
+// Fallbacks
+$input: $black;
+$input-text: $white;
+$hover: red;
+$hover-text: $white;
+$error: #c34e4e;
+$use-border-bot: 'false';
+
+
+
+// Defaults
+$gf-label-color: $input-text;
+$gf-label-req-color: $input-text;
+
+//Main
+$gf-input-background: $input;
+$gf-input-border: $input;
+$gf-input-color: $input-text;
+
+//Hover
+$gf-input-background-hover: $hover;
+$gf-input-border-hover: $hover;
+$gf-input-color-hover: $hover-text;
+
+//Focus
+$gf-input-background-focus: darken($hover, 10%);
+$gf-input-border-focus: darken($hover, 10%);
+$gf-input-color-focus: $hover-text;
+
+//Button
+$gf-button: $hover;
+$gf-button-text: $hover-text;
+$border-padding: 0;
+
+//Border or background
+@if($use-border-bot == 'false') {
+	$gf-input-border: transparent;
+	$gf-input-border-hover: transparent;
+	$gf-input-border-focus: transparent;
+	$border-padding: 0.8rem;
+}
+@else {
+	$gf-input-background: transparent;
+	$gf-input-background-hover: transparent;
+	$gf-input-background-focus: transparent;
+	$border-padding: 0;
+}
+
+// Validation errors
+$gf-validation-error-color: $error;
+$gf-validation-error-border: $error;
+$gf-field-error-color: $error;
+$gf-field-error-background: rgba($error, .1);
+$gf-message-error-color: $error;
+$gf-label-error-color: $error;
+$gf-input-error-border: $error;
+
+/**
+ * Form wrapper
+ **/
+
+.gform {
+	&_wrapper {
+		margin: 0 !important;
+		max-width: none !important;
+	}
+
+	&_body {
+		width: 100% !important;
+	}
+
+	// List of fields (reset from entry.scss)
+	&_fields {
+		list-style: none;
+		padding-left: 0;
+	}
+
+	&_title {
+		font-size: 3rem !important;
+		font-weight: 400 !important;
+	}
+
+	// Submit
+	&_button {
+		@extend .btn;
+		@include button-bg($gf-button);
+		color: $gf-button-text;
+	}
+
+	&_footer {
+		//text-align: center;
+	}
+}
+
+/**
+ * Form fields
+ **/
+
+.gfield {
+	margin-bottom: 1.5rem;
+	padding-right: 0 !important;
+	// Labels
+	&_label {
+		display: none !important;
+		color: $gf-label-color;
+	}
+
+	&_required {
+		color: $gf-label-req-color;
+	}
+	// Description
+	&_description {
+		padding-right: 0 !important;
+		padding-left: 0 !important;
+	}
+	// Fields
+	input[type="email"],
+	input[type="text"],
+	textarea {
+		display: block;
+		width: 100% !important;
+		padding: 0.8rem $border-padding !important;
+		line-height: 1;
+		background: $gf-input-background;
+		border: none;
+		border-bottom: 0.1rem solid $gf-input-border;
+		-webkit-appearance: none;
+		border-radius: 0;
+		transition: all 0.3s ease;
+		color: $gf-input-color;
+
+		&:hover {
+			background: $gf-input-background-hover;
+			color: $gf-input-color-hover;
+			border-color: $gf-input-border-hover;
+		}
+
+		&:focus {
+			background: $gf-input-background-focus;
+			color: $gf-input-color-focus;
+			border-color: $gf-input-border-focus;
+		}
+	}
+}
+
+/**
+ * Validations
+ **/
+
+.validation_error {
+	color: $gf-validation-error-color !important;
+	text-align: left !important;
+	border-top: none !important;
+	border-bottom: none !important;
+	padding: 0 !important;
+}
+
+.gfield_error {
+	min-width: 100%!important;
+	border: none !important;
+	padding: 0 !important;
+	background: transparent !important;
+
+	.gfield_label,
+	.gfield_required {
+		color: $gf-label-error-color !important;
+	}
+
+	.validation_message {
+		color: $gf-message-error-color !important;
+		font-size: 1.2rem !important;
+	}
+
+	input[type="email"],
+	input[type="text"],
+	textarea {
+		border: none !important;
+
+		@if($use-border-bot == 'false') {
+			border: 0.2rem solid $gf-input-error-border !important;
+		}
+		@else {
+			border-bottom: 0.2rem solid $gf-input-error-border !important;
+		}
+	}
+}

@@ -1,0 +1,24 @@
+/**
+ * Buttons
+ **/ 
+
+.btn {
+	display: inline-block;
+	padding: 1rem 2.5rem;
+	border: none;
+	-webkit-appearance: none;
+	cursor: pointer;
+	transition: all .3s ease;
+
+	&:hover {
+		> i {
+			transform: translateX(.5rem);
+		}
+	}
+
+	// Buttons with icons
+	> i {
+		padding-left: .5rem;
+		transition: transform .3s ease;
+	}
+}

@@ -1,0 +1,61 @@
+.page {
+	&__header {
+		@include bg-size(cover);
+		@include overlay($background: rgba($gray-light,.7));
+		height: 52rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-position: bottom center;
+		@include mq(sm) {
+			height: 66rem;
+		}
+
+		> * {
+			position: relative;
+			z-index: 10;
+		}
+	}
+
+	&__title {
+		font-size: 2.4rem;
+		font-weight: 700;
+		text-align: center;
+		padding-top: 3rem;
+		text-transform: uppercase;
+		color: $white;
+		padding-top: 4rem;
+		@include mq(sm){
+		font-size: 4rem;
+		padding-top: 6rem;
+		}
+	}
+
+	&__cv {
+		display: flex;
+		justify-content: center;
+		align-items: baseline;
+		padding-top: 10rem;
+		flex-wrap: wrap;
+
+		&--btn {
+			text-transform: uppercase;
+			font-size: 1rem;
+			font-weight: 700;
+
+			&-outline {
+				color: $gray;
+				background: $white;
+				border: .1rem solid rgba($gray, .6);
+				margin: 1rem;
+				transition: 1s ease all;
+				&:hover{
+					background: $gray;
+					color: $white;
+					border: .1rem solid rgba($gray, .6);
+				}
+			}
+
+		}
+	}
+}
