@@ -1,7 +1,4 @@
 <?php get_header(); ?>
-
-<?php get_template_part('partials/page', 'header'); ?>
-
 <article class="page__content">
 	<?php
 	if ( have_posts() ) {

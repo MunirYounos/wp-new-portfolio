@@ -1504,8 +1504,10 @@ button {
 }
 
 .section__title {
-  font-size: 3rem;
-  text-transform: uppercase;
+  font-size: 4.5rem;
+  color: #888888;
+  text-transform: capitalize;
+  text-align: center;
   font-weight: 700;
   padding-bottom: 3rem;
 }
@@ -2193,20 +2195,77 @@ body.is-fixed .nav-toggle__icon::after {
  * Slider
  **/
 .slider {
-  position: relative;
+  z-index: 3;
   background: #f3f3f3;
-  z-index: 0;
+  display: block;
+  width: 100%;
+  height: 60rem;
+  clear: both;
+}
+
+.slider__cta {
+  display: block;
+  padding-bottom: 8.4rem;
+  padding-left: 12rem;
+  width: 40%;
+}
+
+.slider__cta-title {
+  font-size: 3.5rem;
+  padding-top: 10rem;
+  padding-bottom: 4rem;
+  font-weight: 700;
+  display: block;
+  width: 100%;
+  color: #242426;
+}
+
+.slider__cta-caption {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.slider__cta-btn {
+  text-transform: uppercase;
+  color: #242426;
+  font-weight: 400;
+  font-size: 1.4rem;
+  margin-top: 4rem;
+  padding: .5rem 3rem;
+  position: relative;
+  border: .1rem solid tomato;
+}
+
+.slider__cta-btn-ar {
+  position: absolute;
+  top: 16%;
+  left: 10.5rem;
+  font-size: 2rem;
+}
+
+.slider__wrap {
+  padding-bottom: 4rem;
+  position: relative;
+  padding-left: 12rem;
 }
 
 .slider__frame {
   background-repeat: no-repeat;
   display: block;
   width: 100%;
-  height: 100%;
   z-index: 22;
   position: absolute;
-  top: -6rem;
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+  top: 0;
   left: 0;
+}
+
+@media (min-width: 992px) {
+  .slider__frame {
+    left: 4rem;
+  }
 }
 
 .slider__item {
@@ -2218,11 +2277,12 @@ body.is-fixed .nav-toggle__icon::after {
           align-items: center;
   position: relative;
   z-index: 2;
-  width: 34%;
-  margin-left: 13rem;
-  margin-top: 4rem;
+  width: 100%;
+  height: 50rem;
+  margin-left: 0rem;
+  margin-top: 2rem;
   margin-bottom: 6rem;
-  height: 48rem;
+  overflow: hidden;
   background: no-repeat center center;
   background-size: cover;
 }
@@ -2469,7 +2529,8 @@ body.is-fixed .nav-toggle__icon::after {
 .wpcf7-submit {
   color: #fff;
   background: #bbbbbb;
-  border: 0.1rem solid #d5d5d5;
+  border: none;
+  border-bottom: 0.1rem solid #d5d5d5;
   padding: 1rem 0;
   text-transform: uppercase;
   -webkit-transition: .6s ease all;
@@ -2479,11 +2540,12 @@ body.is-fixed .nav-toggle__icon::after {
 .wpcf7-submit:hover {
   color: #626262;
   background: #f3f3f3;
-  border: 0.1rem solid #d5d5d5;
+  border-bottom: 0.1rem solid #d5d5d5;
 }
 
 .wpcf7-form-control {
-  border: 0.1rem solid #eeeeee;
+  border: none;
+  border-bottom: 0.1rem solid #d5d5d5;
   width: 100% !important;
   padding: 1rem 0;
 }
@@ -2511,6 +2573,83 @@ body.is-fixed .nav-toggle__icon::after {
     width: 50%;
     height: 100%;
   }
+}
+
+.boxes {
+  display: block;
+  width: 100%;
+  padding: 4rem 0;
+}
+
+.boxes__service-title {
+  font-size: 4.5rem;
+  padding-top: 6rem;
+  padding-bottom: 2rem;
+  font-weight: 700;
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #888888;
+}
+
+.boxes__flex {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.boxes__wrapper {
+  margin-right: 4rem;
+  -webkit-transition: 1s ease all;
+  transition: 1s ease all;
+}
+
+.boxes__wrapper:nth-child(odd) {
+  border-bottom: 0.4rem solid #888888;
+  border-radius: .4rem;
+}
+
+.boxes__wrapper:nth-child(even) {
+  border-bottom: 0.4rem solid #f3f3f3;
+  border-radius: .4rem;
+}
+
+.boxes__wrapper:hover {
+  border-bottom: .4rem solid tomato;
+  box-shadow: 0px 12px 12px -2px rgba(36, 36, 38, 0.5);
+  border-radius: .4rem;
+}
+
+.boxes__boxlink {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 2rem 1rem;
+}
+
+.boxes__caption {
+  color: #242426;
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+.boxes__caption-title {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding: 2rem 0;
+}
+
+.boxes-btn {
+  text-transform: uppercase;
+  color: #242426;
+  font-weight: 400;
+  padding-top: 4rem;
+  position: relative;
 }
 
 .mixitup__tabs {

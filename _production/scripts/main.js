@@ -40,7 +40,7 @@ jQuery(document).ready(function($){
 			autoplayTimeout: sliderPause,
 			smartSpeed: sliderSpeed,
 			navSpeed: sliderSpeed,
-			nav: false,
+			nav: true,
 			dots: false,
 			animateOut: animation
 		});

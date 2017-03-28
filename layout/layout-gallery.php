@@ -12,7 +12,7 @@ $add_caption = get_sub_field('gallery_add_caption');
 
 if ( $gallery ) : ?>
 
-	<section <?= $attributes ?> itemscope itemtype="http://schema.org/ImageGallery">
+	<section id="gallery" <?= $attributes ?> itemscope itemtype="http://schema.org/ImageGallery">
 		<div class="container">
 
 			<?php

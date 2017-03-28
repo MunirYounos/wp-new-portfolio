@@ -1,22 +1,22 @@
-<?php 
+<?php
 /**
  * Layout type: Columns
  * @since 1.1.0
- **/ 
+ **/
 
 $attributes = get_section_attributes('settings_', $extra_class = 'section__row' ); // atframe-layout.php
 $columns    = (int) get_sub_field('columns');
 
 if ( $columns > 0 ) : ?>
 
-	<section <?= $attributes ?>>
+	<section id='contact'<?= $attributes ?>>
 		<div class="container">
 
 
-			<?php 
+			<?php
 			/**
 			 * Section title
-			 **/ 
+			 **/
 			$add_title = get_sub_field('add_title');
 			if ( $add_title ) {
 				echo get_section_title('title_', 'section__title'); // atframe-layout.php
@@ -25,10 +25,10 @@ if ( $columns > 0 ) : ?>
 			<div class="row">
 
 
-				<?php 
+				<?php
 				/**
 				 * Generate column markup
-				 **/ 
+				 **/
 
 				$i = 0;
 				while ( $i < $columns ) :

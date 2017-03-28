@@ -4,7 +4,7 @@
 
 if ( have_rows('mixitup_mixitup') ) : ?>
 
-<section >
+<section id='projects' >
 
       <div class="container">
 
@@ -29,7 +29,7 @@ if ( have_rows('mixitup_mixitup') ) : ?>
 
 
 
-  <div class="container-fluid">
+  <div class="container">
     <div class="row">
 
 

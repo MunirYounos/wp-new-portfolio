@@ -1,13 +1,19 @@
 <?php
 
 // Layout type: Icons
-
+ $service_title = get_sub_field('boxes_service_title');
 if ( have_rows('boxes_boxes') ) : ?>
 
-<section >
-  <div class="container-fluid">
-    <div class="row">
-      <div class="boxes">
+<section id="services">
+  <div class="container">
+  <div class="boxes">
+
+
+    <div class="col-sm-12">
+      <h2 class='boxes__service-title'><?php echo $service_title; ?></h2>
+    </div>
+
+      <div class="boxes__flex">
 
   		<?php
       // Loop through icons
@@ -15,32 +21,29 @@ if ( have_rows('boxes_boxes') ) : ?>
   	   the_row();
 
         //vars
-        // $image = get_sub_field('image');
-        // $icon = get_sub_field('icon');
-        // $title = get_sub_field('title');
-        // $subtitle = get_sub_field('desc');
-        // $number = get_sub_field('link');
-        // $link = get_sub_field('page_link');
+        $icon = get_sub_field('icon');
+        $title = get_sub_field('title');
+        $desc = get_sub_field('desc');
+        $number = get_sub_field('link');
+        $link = get_sub_field('page_link');
         ?>
 
           <div class="boxes__wrapper">
             <a class="boxes__boxlink" href="<?php echo $link; ?><?php echo '#mix'. strtolower($number); ?>">
 
-            <div class="boxes__overlay" style="background-image: url('<?php echo $image['url']; ?>')">
-
               <div class="boxes__caption">
-                <img class="boxes__icon" src="<?php echo $icon['sizes']['thumbnail']; ?>" style="width: 8rem;">
+                <img class="boxes__icon" src="<?php echo $icon['sizes']['thumbnail']; ?>" style="width: 6rem;">
                 <div class="boxes__caption-title">
                   <?php echo $title; ?>
                 </div>
                 <div class="boxes__caption-subtitle">
-                    <span><?php echo $subtitle; ?></span>
-                    <div class="boxes__caption-arrow">
-            
+                    <span><?php echo $desc; ?></span>
+                    <div class="boxes__caption-btn">
+                    <div class="boxes__caption-btn"href="<?php echo $link; ?><?php echo '#mix'. strtolower($number); ?>"><?php _e('More..','leafMedia') ?></div>
                     </div>
                 </div>
               </div>
-            </div>
+
 
             </a>
           </div>

@@ -11,7 +11,8 @@
 	&-submit {
 		color:$white;
 		background: lighten($gray, 20%);
-		border: .1rem solid lighten($gray, 30%);
+    border:none;
+		border-bottom: .1rem solid lighten($gray, 30%);
 		padding: 1rem 0;
 		text-transform: uppercase;
 		transition: .6s ease all;
@@ -19,7 +20,7 @@
 		&:hover{
 			color: lighten($gray-dark, 5%);
 			background: $offwhite;
-			border: .1rem solid lighten($gray, 30%);
+		border-bottom: .1rem solid lighten($gray, 30%);
 		}
 
 
@@ -29,7 +30,8 @@
  }
 
 .wpcf7-form-control{
-	border: .1rem solid lighten($gray, 40%);
+      border:none;
+	border-bottom: .1rem solid lighten($gray, 30%);
 	width: 100% !important;
 	padding: 1rem 0;
  }
