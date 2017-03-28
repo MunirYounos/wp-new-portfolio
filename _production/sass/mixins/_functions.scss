@@ -8,7 +8,7 @@
 // @param  {length} $md [''] - width of the image at md
 // @param  {length} $lg [''] - width of the image at lg
 
-@mixin acpect_ratio($width, $height, $url:'toplogo.png', $xs:'', $sm:'', $md:'', $lg:'') {
+@mixin acpect_ratio($width, $height, $url:'botlogo.png', $xs:'', $sm:'', $md:'', $lg:'') {
 
 	$ratio: $height/$width;
 

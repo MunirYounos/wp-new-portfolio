@@ -1,35 +1,53 @@
 /**
- * Site header
- **/
+	 * Site header
+	 **/
 
-.header {
-position: absolute;
-top: 0;
-left: 0;
-width: 100%;
-padding-top: 2rem;
-padding-bottom: 2rem;
-z-index: 50;
+	.header {
+	position:relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	z-index: 50;
+	background: $offwhite;
 
-@include mq(sm) {
-	padding-top: 4rem;
-	padding-bottom: 4rem;
-}
 
-&__wrapper {
-display: flex;
-justify-content: space-between;
-align-items: center;
-}
+
+	@include mq(sm) {
+		padding-top: 4rem;
+		padding-bottom: 4rem;
+	}
 
 	&__logo {
-		float: left;
-		display: block;
-		text-align: center;
+		margin: 0 auto;
+		margin-bottom: 2rem;
 
 
-		// acpect_ratio($width, $height, $url:'logo.svg', $xs:'', $sm:'', $md:'', $lg:'')
-		@include acpect_ratio( 20rem, 8rem, $xs:18rem/1 );
-		@include bg-size(contain);
+			// acpect_ratio($width, $height, $url:'logo.svg', $xs:'', $sm:'', $md:'', $lg:'')
+			@include acpect_ratio( 26rem, 13rem, $xs:18rem/1 );
+			@include bg-size(contain);
+		}
+
+		&__nav{
+			display: flex;
+			justify-content: center;
+			flex-grow: 1;
+
+		}
+
+		&__triangle-down{
+			width: 25%;
+	    height: 0;
+
+
+			&-div{
+			width: 0;
+			height: 0;
+			border-left: 500px solid transparent;
+			border-right: 500px solid transparent;
+			border-top: 500px solid #4679BD;
+			}
+
+		}
 	}
-}

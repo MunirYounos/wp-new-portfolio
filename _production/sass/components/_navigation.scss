@@ -2,9 +2,9 @@
  * Navigation
  **/
 $nav-header-height: 9.7rem;
-$nav-dropdown-bg: $cream;
-$nav-mobile-bg: $gray-light;
-$nav-mobile-dropdown-bg: $cream;
+$nav-dropdown-bg: $black;
+$nav-mobile-bg: $black;
+$nav-mobile-dropdown-bg: $light_black;
 
 
 .nav {
@@ -26,9 +26,9 @@ $nav-mobile-dropdown-bg: $cream;
 		padding: 1.5rem;
 		line-height: 1;
 		white-space: nowrap;
-		color: $white;
-		font-size: 1.4rem;
-		font-weight: 700;
+		color: $black;
+		font-size: 1.2rem;
+		font-weight: 500;
 		text-transform: uppercase;
 
 		@include mq(sm) {
@@ -40,9 +40,9 @@ $nav-mobile-dropdown-bg: $cream;
 				position: absolute;
 				top: 80%;
 				left: 3.5rem;
-				background: $white;
-				width: calc(100% - 5.3rem);
-				height: .2rem;
+				background: $light_black;
+				width: calc(100% - 5.5rem);
+				height: .1rem;
 				transition: .6s ease all;
 				transform: scale(0);
 			}
@@ -53,7 +53,7 @@ $nav-mobile-dropdown-bg: $cream;
 		&:hover {
 			@include mq($until: sm) {
 				background: $white;
-				color: $gray;
+				color: $light_black;
 			}
 
 			@include mq(sm) {

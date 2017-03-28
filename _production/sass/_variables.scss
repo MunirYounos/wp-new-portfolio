@@ -4,17 +4,16 @@
 
 $black: #000;
 $white: #fff;
-$offwhite:#eaedf0;
+$offwhite:#f3f3f3;
+$light_black:#242426;
 $gray:#888888;
-$gray-dark:#666;
-$logo-color:#51ba6f;
-
+$gray-dark:#555;
 $gray-light:#ccc;
 $cream:#ded0c3;
 
 
-$colour-text: $gray;
-$colour-heading: $gray;
+$colour-text: $black;
+$colour-heading: $black;
 
 
 /**
@@ -31,8 +30,8 @@ $section-themes: (
  * Fonts
  **/
 
-$body: "diavlo",sans-serif;
-$heading: "diavlo",sans-serif;
+$body: "anisette-petite";
+$heading: "anisette-petite";
 
 
 
@@ -49,7 +48,7 @@ $z-nav-mobile: 800;
  * Mobile navigation toggle
  **/
 
-$toggle-bg: $white;
+$toggle-bg: $black;
 $toggle-label-color: $toggle-bg;
 $toggle-height: .3rem;
 $toggle-width: 2.5rem;

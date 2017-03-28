@@ -20,9 +20,6 @@ if ( have_rows('layout') ) {
 			case 'slider':
 				get_template_part('layout/layout', 'slider');
 				break;
-				case 'boxes':
-						get_template_part('layout/layout', 'boxes');
-				break;
 				case 'mixitup':
 						get_template_part('layout/layout', 'mixitup');
 				break;

@@ -15,12 +15,12 @@ if ( have_rows('boxes_boxes') ) : ?>
   	   the_row();
 
         //vars
-        $image = get_sub_field('image');
-        $icon = get_sub_field('icon');
-        $title = get_sub_field('title');
-        $subtitle = get_sub_field('desc');
-        $number = get_sub_field('link');
-        $link = get_sub_field('page_link');
+        // $image = get_sub_field('image');
+        // $icon = get_sub_field('icon');
+        // $title = get_sub_field('title');
+        // $subtitle = get_sub_field('desc');
+        // $number = get_sub_field('link');
+        // $link = get_sub_field('page_link');
         ?>
 
           <div class="boxes__wrapper">
@@ -36,7 +36,7 @@ if ( have_rows('boxes_boxes') ) : ?>
                 <div class="boxes__caption-subtitle">
                     <span><?php echo $subtitle; ?></span>
                     <div class="boxes__caption-arrow">
-                      <i class="fa fa-arrow-circle-down" aria-hidden="true"></i>
+            
                     </div>
                 </div>
               </div>

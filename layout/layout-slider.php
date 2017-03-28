@@ -7,10 +7,12 @@
 $speed = get_sub_field('slider_speed') ?: get_field('slider_speed');
 $pause = get_sub_field('slider_pause') ?: get_field('slider_pause');
 $animate = get_sub_field('slider_animation') ?: get_field('slider_animation');
+$computer = get_sub_field('slider_computer') ?: get_field('slider_computer');
 
 if ( have_rows('slider_slides') ) : ?>
 
-	<section class="slider">
+	<section id='topslider' class="slider">
+		<div class="slider__frame" style="background-image: url(<?= $computer['sizes']['large']; ?>);"></div>
 		<div class="slider__list is-slider" data-speed="<?= $speed; ?>" data-pause="<?= $pause; ?>" data-animation="<?= $animate; ?>">
 
 			<?php

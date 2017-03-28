@@ -17,8 +17,7 @@
 <header class="header" role="banner">
 	<div class="container">
 
-		<div class="header__wrapper">
-			<div class="header__wrapper-item">
+			<div class="header__logo">
 				<?php
 				// Logo markup
 				$blog_name = get_bloginfo( 'name' );
@@ -28,8 +27,9 @@
 				<a class="header__logo" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo $blog_name; ?>" rel="home">
 					<?php echo $logo; ?>
 				</a>
-		</div>
-		<div class="header__wrapper-item">
+			</div>
+
+		<div class="header__nav">
 
 					<div class="nav-toggle visible-xs">
 						<span class="nav-toggle__label"><?php _e('Menu', 'leafMedia') ?></span>
@@ -51,9 +51,8 @@
 						</div>
 					</nav>
 
-			</div>
 		</div>
 	</div>
 </header>
-
+<div class="header__triangle-down"><div class="header__trinagle-down-div"></div></div>
 <main class="main" role="main">
