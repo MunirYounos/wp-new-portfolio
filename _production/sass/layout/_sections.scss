@@ -62,8 +62,8 @@
 	}
 
 	&__title {
-		font-size: 4.5rem;
-		color: $gray;
+		font-size: 3.5rem;
+		color: $light_black;
 		text-transform: capitalize;
 		text-align: center;
 		font-weight: 700;
@@ -79,7 +79,10 @@
 	}
 
 	&__col {
-
+		font-size: 1.4rem;
+		color: $light_black;
+		font-weight: 300;
+		padding-left: 4rem;
 
 	}
 }

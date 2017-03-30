@@ -26,6 +26,9 @@ if ( have_rows('layout') ) {
 				case 'mixitup':
 						get_template_part('layout/layout', 'mixitup');
 				break;
+				case 'posts':
+						get_template_part('layout/layout', 'posts');
+				break;
 			default:
 				break;
 		}

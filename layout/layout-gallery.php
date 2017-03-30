@@ -29,7 +29,7 @@ if ( $gallery ) : ?>
 
 					<figure class="gallery__item lazy-wrapper" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
 						<a href="<?= $image['sizes']['large']; ?>" class="js-zoom gallery__link" rel="gallery-<?= $index; ?>" itemprop="contentUrl" title="<?= $image['caption'] ?>" data-size="<?= $image['sizes']['large-width'] . 'x' . $image['sizes']['large-height']; ?>">
-							<img class="gallery__image lazy" data-src="<?= $image['sizes']['thumbnail']; ?>" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="<?= $image['alt']; ?>" itemprop="thumbnail" height="<?= $image['sizes']['large-height']; ?>" width="<?= $image['sizes']['large-width']; ?>">
+							<img class="gallery__image lazy" data-src="<?= $image['sizes']['large']; ?>" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="<?= $image['alt']; ?>" itemprop="thumbnail" height="<?= $image['sizes']['large-height']; ?>" width="<?= $image['sizes']['large-width']; ?>">
 						</a>
 
 						<?php	if ( $add_caption && $image['caption'] !== '' ) : ?>

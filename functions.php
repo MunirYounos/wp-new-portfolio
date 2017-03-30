@@ -143,6 +143,7 @@ add_action( 'after_setup_theme', 'register_menus' );
 
 // Image sizes
 // add_image_size('name', width, height, crop);
+add_image_size('testimonial', 300, 500, true);
 
 
 // Add created images sizes to dropdown in WP control panel
@@ -175,7 +176,7 @@ add_filter( 'gform_confirmation_anchor', '__return_true' );
  **/
 
 function custom_excerpt_length( $length ) {
-	return 40;
+	return 20;
 }
 
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );

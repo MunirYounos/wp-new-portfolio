@@ -2,19 +2,28 @@
  * Slider
  **/
 .slider {
-	z-index: 3;
+	z-index: 332;
 	background: $offwhite;
 	display: block;
 	width: 100%;
 	height: 60rem;
-	clear: both;
+
+	@include mq($until: md){
+		height: 80rem;
+	}
+
+	&__left, &__right{
+		font-size: 2rem;
+		background: $white;
+		padding: .5rem 1rem;
+		border: .1rem solid $light_black;
+		cursor: pointer;
+	}
 
 
 	&__cta{
 		display: block;
 		padding-bottom: 8.4rem;
-		padding-left: 12rem;
-		width: 40%;
 
 		&-title{
 			font-size: 3.5rem;
@@ -29,6 +38,12 @@
 		&-caption{
 			font-size: 1.5rem;
 			font-weight: 300;
+			padding-left: 10rem;
+			background: transparent;
+
+			@include mq($until: md){
+				padding-left: 1rem;
+			}
 		}
 
 		&-btn{
@@ -39,7 +54,8 @@
 			margin-top: 4rem;
 			padding: .5rem 3rem;
 			position: relative;
-			border: .1rem solid tomato;
+			background: $white;
+			border: .1rem solid $light_black;
 
 			&-ar{
 				position: absolute;
@@ -51,38 +67,20 @@
 
 	}
 	&__wrap{
-		padding-bottom: 4rem;
 		position: relative;
-		padding-left: 12rem;
 	}
 
-	&__frame{
-		background-repeat: no-repeat;
-		display: block;
-		width: 100%;
-		z-index: 22;
-		position: absolute;
-		transform: translateX(0);
-		top: 0;
-		left: 0;
-		@include mq(md){
-		left:4rem;
-		}
-	}
 
 	&__item {
 		display: flex;
 		align-items: center;
-		position: relative;
-		z-index: 2;
-			width: 100%;
-			height: 50rem;
-		margin-left:0rem;
-		margin-top: 2rem;
-		margin-bottom: 6rem;
+		z-index: 255;
+		width: 100%;
 		overflow: hidden;
+		box-sizing: border-box;
 		background: no-repeat center center;
 		background-size: cover;
+		padding-bottom: 10rem;
 
 
 		&:before {
@@ -153,8 +151,19 @@
 		display: none;
 	}
 
+	.owl-nav{
+		display: block;
+		width: 100%;
+		position: absolute;
+		top: 45%;
+		left: 0;
+	}
 	.owl-nav .owl-prev,
-	.owl-nav .owl-next,
+	.owl-nav .owl-next{
+		width: 100%;
+
+	}
+
 	.owl-dot {
 		cursor: pointer;
 		cursor: hand;

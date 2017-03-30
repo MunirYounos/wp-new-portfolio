@@ -15,8 +15,7 @@
 
 <body <?php body_class(); ?>>
 <header class="header" role="banner">
-	<div class="container">
-
+		<div class="container">
 			<div class="header__logo">
 				<?php
 				// Logo markup
@@ -28,8 +27,9 @@
 					<?php echo $logo; ?>
 				</a>
 			</div>
+		</div>
 
-		<div class="header__nav">
+		<div id="header_menu" class="header__nav">
 
 					<div class="nav-toggle visible-xs">
 						<span class="nav-toggle__label"><?php _e('Menu', 'leafMedia') ?></span>
@@ -38,7 +38,20 @@
 
 					<nav class="nav" role="navigation">
 						<div class="nav--mobile">
-							<?php wp_nav_menu( array(
+							<?php
+								if(is_front_page() ){
+									/*custome menu for front page*/
+									wp_nav_menu( array(
+									'menu' => ' Front Page Menu',
+									'container'			=> false,
+									'menu_class'		=> 'nav__list',
+									'echo'				=> true,
+									'items_wrap'		=> '<ul id="%1$s" class="%2$s">%3$s</ul>',
+									'depth'				=> 10,
+									'fallback_cb'		=> '__return_false',
+									'walker'				=> new leafMedia_Walker_Nav
+								));}else{
+								wp_nav_menu( array(
 								'theme_location'	=> 'primary-nav',
 								'container'			=> false,
 								'menu_class'		=> 'nav__list',
@@ -47,12 +60,11 @@
 								'depth'				=> 10,
 								'fallback_cb'		=> '__return_false',
 								'walker'				=> new leafMedia_Walker_Nav
-							)); ?>
+							)); } ?>
 						</div>
 					</nav>
 
 		</div>
-	</div>
+
 </header>
-<div class="header__triangle-down"><div class="header__trinagle-down-div"></div></div>
 <main class="main" role="main">
