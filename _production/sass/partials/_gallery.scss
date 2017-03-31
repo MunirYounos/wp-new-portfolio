@@ -35,10 +35,10 @@ $gallery-spacing: 1rem;
 
 	&__link {
 		@include gallery-overlay(
-			$background: rgba($offwhite, .6),
-			$icon: '\f067',
-			$color: $light_black,
-			$font-size: 2rem
+			$background: rgba($light_black, .5),
+			$icon: '\f08e',
+			$color: $white,
+			$font-size: 1.6rem
 		);
 	}
 

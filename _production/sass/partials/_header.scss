@@ -20,9 +20,8 @@
 
 		margin-bottom: 2rem;
 
-
 			// acpect_ratio($width, $height, $url:'logo.svg', $xs:'', $sm:'', $md:'', $lg:'')
-			@include acpect_ratio( 26rem, 13rem, $xs:18rem/1 );
+			@include acpect_ratio( 18rem, 9rem, $xs:14rem/1 );
 			@include bg-size(contain);
 
 			@include mq(md){

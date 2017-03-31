@@ -3,7 +3,7 @@
   &__tabs {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     text-decoration: none;
     margin-top: 2.5rem;
       @include mq(sm) {
@@ -14,34 +14,35 @@
   }
 
   &__btn {
-    padding: .5rem 2rem;
-    color: $white;
-    background: $gray-light;
-    border: .1rem solid rgba($gray-dark, .5);
+    padding: .3rem 2rem;
+    color: $light_black;
+    background: $white;
+    border: .1rem solid rgba($light_black, .5);
     margin: .5rem;
     margin-right: .5rem;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 300;
     cursor: pointer;
     transition: 1s ease all;
 
     &:hover{
-      background: $gray;
+      background: $light_black;
+      color: $white;
       border: .1rem solid $gray-light;
     }
   }
   &__link{
-    min-height: 40rem;
+    min-height: 25rem;
     @include bg-size;
   }
   &__wrapper {
     display: flex;
     flex-wrap: wrap;
-    margin: .5rem;
+    margin: .2rem;
   }
   &__figure {
-    padding: .5rem;
+    padding: .2rem;
     box-sizing: border-box;
     // flex: 1 0 100%;
     width: 100%;
@@ -54,17 +55,18 @@
       }
       &:nth-child(6n+5){
         // flex: 1 0 percentage(1/3);
-        width: percentage(1/3);
+        width: percentage(1/4);
       }
       &:nth-child(6n+6){
         // flex: 1 0 percentage(2/3);
-        width: percentage(2/3);
+        width: percentage(2/4);
       }
     }
   }
 
   &-control-active{
-    background: $gray;
+    background: $light_black;
+    color: $white;
     border: .1rem solid $gray;
 
   }

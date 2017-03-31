@@ -1,12 +1,16 @@
 <?php
 
 // Layout type: Icons
+        $main_title = get_sub_field('mixitup_main_title');
 
 if ( have_rows('mixitup_mixitup') ) : ?>
 
 <section id='projects' >
 
       <div class="container">
+      <?php  if ( $main_title !== '' ) : ?>
+          <h2 class="gallery__title"><?= $main_title; ?></h2>
+        <?php endif; ?>
 
         <div class="mixitup__tabs">
           <button class="mixitup__btn" type="button" data-filter="all"><?php _e('All', 'leafMedia'); ?></button>

@@ -143,7 +143,7 @@ add_action( 'after_setup_theme', 'register_menus' );
 
 // Image sizes
 // add_image_size('name', width, height, crop);
-add_image_size('testimonial', 300, 500, true);
+add_image_size('testimonial', 800, 800, true);
 
 
 // Add created images sizes to dropdown in WP control panel

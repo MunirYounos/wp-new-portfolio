@@ -29,6 +29,12 @@ if ( have_rows('layout') ) {
 				case 'posts':
 						get_template_part('layout/layout', 'posts');
 				break;
+				case 'aboutme':
+						get_template_part('layout/layout', 'aboutme');
+				break;
+				case 'resume':
+						get_template_part('layout/layout', 'resume');
+				break;
 			default:
 				break;
 		}

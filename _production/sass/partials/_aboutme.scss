@@ -1,0 +1,102 @@
+.about{
+  background: $offwhite;
+  margin-top: 12rem;
+
+  &__title{
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-align: center;
+    display: block;
+    width: 100%;
+    padding: 6rem 0;
+
+  }
+  &__border{
+
+  }
+  &__portrait{
+      display: inline-block;
+      border: .5rem solid $light_black;
+      margin-left: 2rem;
+  }
+  &__image{
+    transform: translate(10%, 10%);
+    transition: .5s ease all;
+    &:hover{
+      @include shadow;
+    }
+
+  }
+
+  &__text-title{
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+  }
+  &__text{
+    font-size: 1.4rem;
+    font-weight: 300;
+  }
+
+  &__cv{
+
+    &-btn{
+      color: $light_black;
+      font-size: 1.2rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      border: .1rem solid $light_black;
+      margin-top: 2rem;
+      background: $white;
+      padding: .2rem 1rem;
+      transition: .5s ease all;
+
+      &:hover{
+        background: $light_black;
+        color: $white;
+      }
+    }
+  }
+
+  &__info{
+    font-size: 1.5rem;
+    font-weight: 300;
+    padding-top: 2rem;
+  }
+
+  &__progress{
+    overflow: hidden;
+    height: .2rem;
+    margin-bottom: 1rem;
+    background-color: $white;
+    &-bar{
+      background: $light_black;
+      color: $white;
+      font-size: 1rem;
+      padding-bottom: .5rem;
+      font-weight: 300;
+    }
+  }
+
+  &__icon{
+      display: block;
+      &-text small, i{
+        font-size: 1.2rem;
+        font-weight: 400;
+      }
+      &-accomplished{
+      background: $light_black;
+      color: $white;
+      font-size: 1.2rem;
+      font-weight: 400;
+    }
+    &-image{
+      box-sizing: border-box;
+      max-width: 90%;
+      padding: 1rem;
+
+    }
+  }
+}

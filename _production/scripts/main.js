@@ -97,9 +97,9 @@ jQuery(document).ready(function($){
 
 	 // Use filter
 	if (window.location.hash.substr(1) !== "") {
-		var filter = "."+window.location.hash.substr(1);
+			var filter = "all";
 	} else {
-		var filter = "all";
+		var filter = "."+window.location.hash.substr(1);
 	}
 
 	var $mixitup = $('.mixitup__wrapper');

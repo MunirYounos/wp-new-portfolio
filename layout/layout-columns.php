@@ -4,7 +4,7 @@
  * @since 1.1.0
  **/
 
-$attributes = get_section_attributes('settings_', $extra_class = 'section__row' ); // atframe-layout.php
+$attributes = get_section_attributes('settings_', $extra_class = 'section__row' ); // leafMedia-layout.php
 $columns    = (int) get_sub_field('columns');
 
 if ( $columns > 0 ) : ?>

@@ -11,7 +11,10 @@
 		$footer_logo = get_field('footer_logo', 'options');
 		$footer_contact = get_field('footer_contact', 'options');
 		 ?>
-
+		 	<div class="col-sm-12 footer__logo">
+		 		<img src="<?php echo $footer_logo['sizes']['thumbnail']; ?>" alt="">
+				<?php echo date(f.Y.D); ?>
+		 	</div>
 
 			<?php
 			/**
