@@ -29,7 +29,7 @@ if ( have_rows('boxes_boxes') ) : ?>
         ?>
         <div class="col-xs-12 col-sm-3 col-md-3">
           <div class="boxes__wrapper">
-            <a class="boxes__boxlink" href="<?php echo $link; ?>">
+            <a class="boxes__boxlink" href="http://multimunir.com/portfolio/websites/ ">
 
               <div class="boxes__caption">
                 <img class="boxes__icon" src="<?php echo $icon['sizes']['thumbnail']; ?>" style="width: 6rem;">

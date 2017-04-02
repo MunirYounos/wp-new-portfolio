@@ -96,7 +96,7 @@ jQuery(document).ready(function($){
 	 **/
 
 	 // Use filter
-	if (window.location.hash.substr(1) !== "") {
+	if (window.location.hash.substr(1) == "") {
 			var filter = "all";
 	} else {
 		var filter = "."+window.location.hash.substr(1);
@@ -113,8 +113,15 @@ jQuery(document).ready(function($){
 					animateResizeTargets: true
 				},
 		});
-	}
+	};
+	/**
+	 * grid - masonry
+	 **/
 
+	$('.grid').masonry({
+	  itemSelector: '.grid-item',
+	  columnWidth:280
+	});
 
 	/**
 	 * Gallery - Fancybox

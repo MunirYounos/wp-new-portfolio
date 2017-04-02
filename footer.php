@@ -1,8 +1,9 @@
 </main>
 
 <footer class="footer" role="contentinfo">
+<a class="footer__top"href="#header"><i class="fa fa-angle-up"></i></a>
 	<div class="container">
-		<div class="row footer__wrapper">
+		<div class="footer__wrapper">
 		<?php
 		$email = get_field('mail', 'options');
 		$phone = get_field('phone', 'options');
@@ -11,9 +12,11 @@
 		$footer_logo = get_field('footer_logo', 'options');
 		$footer_contact = get_field('footer_contact', 'options');
 		 ?>
-		 	<div class="col-sm-12 footer__logo">
-		 		<img src="<?php echo $footer_logo['sizes']['thumbnail']; ?>" alt="">
-				<?php echo date(f.Y.D); ?>
+		 	<div class="col-sm-12">
+		 		<img class="footer__logo" src="<?php echo $footer_logo['url']; ?>" alt="">
+				<span class="footer__name"><?php _e('MunirYounosi', 'leafMedia'); ?></span>
+				<p class="footer__date"><?php echo date('j. F Y'); ?></p>
+
 		 	</div>
 
 			<?php

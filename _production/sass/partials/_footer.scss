@@ -1,35 +1,39 @@
 .footer {
 		background: $offwhite;
 		height: 20rem;
-
-		&__wrapper{
-
-		}
-
-		&__info {
-
-			&--wrap {
-
-			}
-			&--title{
-
-			}
-			&--item a{
-
-				&:hover{
-
-				}
+		text-align: center;
+		&__top{
+			float: right;
+			border: .1rem solid $light_black;
+			background: $white;
+			color: $light_black;
+			cursor: pointer;
+			opacity: .7;
+			padding: .5rem 1.6rem;
+			font-size: 2rem;
+			margin: 4rem;
+			transition: 1s ease all;
+			&:hover{
+				color: $white;
+				background: $light_black;
 			}
 		}
 
-		&__bottom {
-			text-align: center;
+		&__logo{
+			display: block;
+			margin: 0 auto;
+			width: 6rem;
+			padding-top: 3rem;
+		}
+		&__name{
+			text-transform: uppercase;
+			font-size: 1.4rem;
+			font-weight: 700;
 
-			&--logo{
-				display: block;
-				margin: 0 auto;
-				width: 10rem;
-			}
+		}
+		&__date{
+			font-size: 1.2rem;
+			font-weight: 400;
 		}
 
 }

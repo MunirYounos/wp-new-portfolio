@@ -14,7 +14,7 @@
 </head>
 
 <body <?php body_class(); ?>>
-<header class="header" role="banner">
+<header id="header" class="header" role="banner">
 		<div class="container">
 			<div class="header__logo">
 				<?php

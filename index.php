@@ -1,57 +1,49 @@
 <?php get_header(); ?>
-
+<section>
 <?php get_template_part('partials/page', 'header'); ?>
+<?php
+$query = new WP_query('pagename = blog');
+ // the Loop
+if( $query -> have_posts()){  ?>
 
-<div class="page__content">
-	<div class="container">
-		<div class="row">
+ <section>
+   <div class="container">
+   <div class="grid">
+     <div class="grid__content">
+         <?php
+       // Loop through icons
+   		while ( $query ->have_posts() ) {
+         $query ->the_post(); ?>
+        <div class="grid__item">
+           <div class="grid__wrapper">
+             <a class="grid__boxlink" href="<?php echo the_permalink(); ?>">
+               <?php echo the_post_thumbnail(); ?>
+               <div class="grid__caption">
+                 <header class="grid__caption-header">
+                   <h4 class="grid__caption-header-title"><?php echo get_the_title(); ?></h4>
+                   <span class="grid__caption-header-meta"><time datetime="<?php the_time('c'); ?>"><?php the_time('j. F Y'); ?></time></span>
+                   <span class="grid__caption-header-meta">| Author:<?php echo ucfirst(get_the_author()); ?></span>
+                 </header>
+                 <div class="grid__caption-content">
+                     <p><?php echo the_excerpt(); ?></p>
+                     <div class="grid__caption-btn">
+                     <div class="grid__caption-btn"href="<?php echo the_permalink(); ?>"></div>
+                     </div>
+                 </div>
+               </div>
+             </a>
+           </div>
 
-			<div class="col-sm-8 col-md-7">
-				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+        </div>
+       <?php  } ?>
 
-					<article class="entry entry--<?php echo $post->post_type; ?>">
+       </div>
+      </div>
+   </div>
+ </section>
 
-						<header class="entry__header">
-							<h2 class="entry__title"><a href="<?php the_permalink(); ?>"><?php echo get_leafMedia_title(); ?></a></h2>
-							<p class="entry__meta"><time datetime="<?php the_time('c'); ?>"><?php the_time('j. F Y'); ?></time></p>
-						</header>
-
-						<div class="entry__excerpt">
-
-							       <div class="wrapper">
-							         <a class="boxlink" href="<?php echo the_permalink(); ?>">
-
-							           <div class="caption">
-							             <?php the_post_thumbnail(); ?>
-							             <div class="entry-title">
-							               <h4><?php echo the_title(); ?></h4>
-							             </div>
-							             <div class="entry-content">
-							                 <p><?php echo the_excerpt('read more...'); ?></p>
-							             </div>
-							           </div>
-
-
-							         </a>
-							       </div>
-
-						</div>
-
-					</article>
-
-				<?php endwhile; else: ?>
-
-					<?php get_template_part('partials/content', 'none'); ?>
-
-				<?php endif; ?>
-			</div>
-
-			<div class="col-sm-4 col-md-offset-1">
-				<?php get_sidebar(); ?>
-			</div>
-
-		</div>
-	</div>
-</div>
+ <?php  }
+   wp_reset_postdata();
+ ?>
 
 <?php get_footer(); ?>

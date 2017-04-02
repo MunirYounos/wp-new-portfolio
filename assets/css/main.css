@@ -2140,16 +2140,44 @@ body.is-fixed .nav-toggle__icon::after {
 .footer {
   background: #f1f1f1;
   height: 20rem;
-}
-
-.footer__bottom {
   text-align: center;
 }
 
-.footer__bottom--logo {
+.footer__top {
+  float: right;
+  border: 0.1rem solid #242426;
+  background: #fff;
+  color: #242426;
+  cursor: pointer;
+  opacity: .7;
+  padding: .5rem 1.6rem;
+  font-size: 2rem;
+  margin: 4rem;
+  -webkit-transition: 1s ease all;
+  transition: 1s ease all;
+}
+
+.footer__top:hover {
+  color: #fff;
+  background: #242426;
+}
+
+.footer__logo {
   display: block;
   margin: 0 auto;
-  width: 10rem;
+  width: 6rem;
+  padding-top: 3rem;
+}
+
+.footer__name {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.footer__date {
+  font-size: 1.2rem;
+  font-weight: 400;
 }
 
 /**
@@ -2762,10 +2790,14 @@ body.is-fixed .nav-toggle__icon::after {
   padding: 4rem 0;
 }
 
-.posts__service-title {
+.posts__gutters {
+  padding: .2rem;
+}
+
+.posts__main-title {
   font-size: 3.5rem;
-  padding-top: 6rem;
-  padding-bottom: 2rem;
+  padding-top: 8rem;
+  padding-bottom: 6rem;
   font-weight: 700;
   display: block;
   width: 100%;
@@ -2775,47 +2807,55 @@ body.is-fixed .nav-toggle__icon::after {
 
 .posts__flex {
   width: 100%;
+  padding: 0;
+  margin: 0;
 }
 
 .posts__wrapper {
   -webkit-transition: 1s ease all;
   transition: 1s ease all;
+  display: block;
+  padding: 1rem;
+  padding-bottom: 3rem;
+  border: 0.1rem solid #f1f1f1;
 }
 
-.posts__wrapper:nth-child(odd) {
-  border-bottom: 0.4rem solid #888888;
-  border-radius: .4rem;
-}
-
-.posts__wrapper:nth-child(even) {
-  border-bottom: 0.4rem solid #f1f1f1;
-  border-radius: .4rem;
+.posts__wrapper:after {
+  content: '';
+  display: block;
+  clear: both;
 }
 
 .posts__wrapper:hover {
-  border-bottom: .4rem solid tomato;
-  box-shadow: 0px 12px 12px -2px rgba(36, 36, 38, 0.5);
-  border-radius: .4rem;
+  box-shadow: 0px 12px 12px -4px rgba(36, 36, 38, 0.5);
 }
 
 .posts__boxlink {
   display: block;
   width: 100%;
   height: 100%;
-  padding: 2rem 1rem;
 }
 
 .posts__caption {
   color: #242426;
   font-size: 1.4rem;
   font-weight: 300;
+  padding: 1rem .5rem;
 }
 
-.posts__caption-title {
+.posts__caption-header {
+  padding: 1rem 0;
+}
+
+.posts__caption-header-title {
   text-transform: uppercase;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 700;
-  padding: 2rem 0;
+}
+
+.posts__caption-header-meta {
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 .posts-btn {
@@ -2930,6 +2970,101 @@ body.is-fixed .nav-toggle__icon::after {
   box-sizing: border-box;
   max-width: 90%;
   padding: 1rem;
+}
+
+.grid {
+  margin: 0 auto;
+}
+
+.grid__content {
+  display: block;
+  width: 100%;
+  padding: 4rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+}
+
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.grid__item {
+  margin-right: .5rem;
+  margin-bottom: 1rem;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+@media (min-width: 768px) {
+  .grid__item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 25%;
+            flex: 1 1 25%;
+  }
+}
+
+.grid__wrapper {
+  -webkit-transition: 1s ease all;
+  transition: 1s ease all;
+  display: block;
+  padding: 1rem;
+  padding-bottom: 3rem;
+  border: 0.1rem solid #f1f1f1;
+}
+
+.grid__wrapper:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.grid__wrapper:hover {
+  box-shadow: 0px 12px 12px -4px rgba(36, 36, 38, 0.5);
+}
+
+.grid__boxlink {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.grid__caption {
+  color: #242426;
+  font-size: 1.4rem;
+  font-weight: 300;
+  padding: 1rem .5rem;
+}
+
+.grid__caption-header {
+  padding: 1rem 0;
+}
+
+.grid__caption-header-title {
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.grid__caption-header-meta {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.grid-btn {
+  text-transform: uppercase;
+  color: #242426;
+  font-weight: 400;
+  padding-top: 4rem;
+  position: relative;
 }
 
 /**
