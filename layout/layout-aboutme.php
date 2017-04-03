@@ -40,7 +40,8 @@
 				</div>
 
 				<div class="col-lg-5 ">
-				    <h5 class="about__info"><?php echo $about_skillsinfo; ?> </h5>
+              <h5 class="about__info"><?php echo $about_skillsinfo; ?> </h5>
+          <div id="bars">
             <?php if ( have_rows('aboutme_skills') ) : ?>
             <?php
               // Loop through icons
@@ -52,25 +53,37 @@
                 $skill_progress = get_sub_field('progress');
                 $icon = get_sub_field('logo');
                 ?>
-                       <div class="about__icon" style="width:6rem;">
-                         <img class="about__icon-image"  src="<?php echo $icon['sizes']['thumbnail']; ?>" alt="" style="width:80%;">
-                       </div>
-                          <div class="about__icon-text">
-                            <small><?php echo $code_name; ?></small>
-                            <i class="fa fa-caret-right"></i>
-                            <span class="about__icon-accomplished"><?php echo $skill_progress; ?>% <?php _e('accomplished','leafMedia') ?>
-                            </span>
-                          </div>
-	                   <div class="about__progress">
-                              <div class="about__progress-bar"  style="width:<?php echo $skill_progress; ?>%"></div>
 
-                      </div>
+                <div class="bar" data-percent="<?php echo $skill_progress; ?>">
+              		<h5 class="about__skills-title"><?php echo $code_name; ?></h5>
+              		<canvas class="bar-circle" width="70" height="70"></canvas>
+              	</div>
+
 
                   <?php endwhile;?>
               <?php endif;?>
+            </div>
 				</div>
-
 			</div><!--/.row -->
 		</div><!--/.container -->
 	</div><!--/ #intro -->
+
+  <div class="container-fluid about__logos">
+    <div class="about__logo">
+      <?php if ( have_rows('aboutme_skills') ) : ?>
+      <?php
+        // Loop through icons
+        while ( have_rows('aboutme_skills') ) :
+         the_row();
+
+          //vars
+          $icon = get_sub_field('icon');
+          ?>
+          <div class=" col-xs-4 col-sm-2 col-md-1">
+          <span class="about__devicon"><?php echo $icon; ?></span>
+          </div>
+            <?php endwhile;?>
+        <?php endif;?>
+    </div>
+  </div>
 </section>

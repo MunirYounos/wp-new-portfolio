@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: blog-page
+ * Template Name: Page-photos
  * @since 1.1.0
  **/
 
@@ -9,9 +9,9 @@ get_header(); ?>
 <?php get_template_part('partials/page', 'header'); ?>
 <?php
 $args = array(
-'posts_per_page' => 4,
+'posts_per_page' => 999,
 'orderby' => 'rand',
-'category_name' => 'web'
+'category_name' => 'photos'
 );
 $query = new WP_query ($args);
  // the Loop

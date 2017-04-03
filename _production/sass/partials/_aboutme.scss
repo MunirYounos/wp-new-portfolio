@@ -2,6 +2,7 @@
   background: $offwhite;
   margin-top: 12rem;
 
+
   &__title{
     font-size: 3.5rem;
     font-weight: 700;
@@ -64,6 +65,7 @@
     font-size: 1.5rem;
     font-weight: 300;
     padding-top: 2rem;
+    padding-bottom: 4rem;
   }
 
   &__progress{
@@ -99,4 +101,41 @@
 
     }
   }
+
+  &__skills-title{
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+  &__logos{
+    background: $white;
+    border-bottom: .1rem solid $offwhite;
+    padding-top: 1rem;
+  }
+
+  &__devicon{
+    font-size: 4rem;
+    color: $gray;
+    transition: 1s ease all;
+    &:hover{
+      color: $light_black;
+    }
+  }
+}
+// skill bar styles
+#bars {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  flex-flow: wrap;
+}
+
+.bar {
+  flex: 1 1 25%;
+  text-align: center;
+}
+
+.bar-circle {
+	display: block;
+  margin: 2rem auto;
 }

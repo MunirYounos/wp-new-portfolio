@@ -63,6 +63,7 @@ function register_scripts() {
 	// wp_enqueue_style( 'google-fonts', 'URL', false, null );
 	// wp_enqueue_style( 'ionicons', 'https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css', false, null );
 	wp_enqueue_style( 'fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css', false, null );
+	wp_enqueue_style( 'Devicon', 'https://cdn.rawgit.com/konpa/devicon/4f6a4b08efdad6bb29f9cc801f5c07e263b39907/devicon.min.css', false, null );
 	wp_enqueue_style( 'main-css', get_template_directory_uri() . '/assets/css/main' . $postfix . '.css', false, null );
 
 

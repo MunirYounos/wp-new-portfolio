@@ -28,6 +28,7 @@ module.exports = function(grunt) {
 		'<%= path.devAssets %>/scripts/leafMedia.google-maps.js',
 		// '<%= path.devAssets %>/scripts/jquery.smartresize.js',
 		'<%= path.devAssets %>/scripts/mixitup.min.js',
+		'<%= path.devAssets %>/scripts/skillbars.js',
 		'<%= path.devAssets %>/scripts/main.js',
 	];
 
