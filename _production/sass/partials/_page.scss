@@ -1,55 +1,39 @@
 .page {
-	&__header {
-		// @include bg-size(cover);
-		// @include overlay($background: rgba($gray-light,.7));
-
-		@include mq(sm) {
-
-		}
-
-		> * {
-			position: relative;
-			z-index: 10;
-		}
-	}
+	// &__header {
+	// 	@include bg-size(cover);
+	// 	@include overlay($background: rgba($gray-light,.7));
+	//
+	// 	@include mq(sm) {
+	//
+	// 	}
+	//
+	// 	> * {
+	// 		position: relative;
+	// 		z-index: 10;
+	// 	}
+	// }
 
 	&__title {
-		font-size: 2.4rem;
+		font-size: 2.5rem;
 		font-weight: 700;
 		text-align: center;
-		padding-top: 3rem;
-		text-transform: uppercase;
-		color: $white;
 		padding-top: 4rem;
+		color: $light_black;
 		@include mq(sm){
-		font-size: 4rem;
+		font-size: 3.5rem;
 		padding-top: 6rem;
 		}
 	}
 
-	&__cv {
-		display: flex;
-		justify-content: center;
-		align-items: baseline;
-		padding-top: 10rem;
-		flex-wrap: wrap;
+	&__inner{
+		margin-top: 3rem;
+		font-size: 1.4rem;
+		font-weight: 300;
+		display: block;
 
-		&--btn {
-			text-transform: uppercase;
-			font-size: 1rem;
-			font-weight: 700;
-
-			&-outline {
-				color: $light_black;
-				background: $white;
-				margin: 1rem;
-				transition: 1s ease all;
-				&:hover{
-
-					color: $white;
-				}
-			}
-
-		}
+	}
+	&__image{
+		margin-bottom: 1rem;
+		display: inline-block;
 	}
 }

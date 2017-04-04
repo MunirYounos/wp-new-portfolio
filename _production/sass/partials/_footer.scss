@@ -1,17 +1,18 @@
 .footer {
 		background: $offwhite;
-		height: 20rem;
+		height: auto;
 		text-align: center;
+		padding: 6rem 0;
 		&__top{
-			float: right;
+			display: inline-block;
 			border: .1rem solid $light_black;
 			background: $white;
 			color: $light_black;
 			cursor: pointer;
 			opacity: .7;
+			margin-top: 3rem;
 			padding: .5rem 1.6rem;
 			font-size: 2rem;
-			margin: 4rem;
 			transition: 1s ease all;
 			&:hover{
 				color: $white;

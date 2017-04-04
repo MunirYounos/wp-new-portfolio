@@ -6,13 +6,19 @@
 	<div class="container">
 		<div class="row">
 
-			<div class="col-sm-8 col-md-7">
+			<div class="col-sm-12 col-md-12 page__inner">
 				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
 					<article class="entry entry--<?php echo $post->post_type; ?>">
-						<?php the_post_thumbnail() ?>
-						<p class="entry__meta"><time datetime="<?php the_time('c'); ?>"><?php the_time('j. F Y'); ?></time></p>
-						<?php the_content(); ?>
+						<div class="col-sm-12 col-md-10 col-md-offset-1 page__image">
+							<?php the_post_thumbnail() ?>
+
+						</div>
+			 			<div class="col-sm-12 col-md-10 col-md-offset-1 ">
+							<span class="grid__caption-header-meta"><time datetime="<?php the_time('c'); ?>"><?php the_time('j. F Y'); ?></time></span>
+							<span class="grid__caption-header-meta">| Author:<?php echo ucfirst(get_the_author()); ?></span>
+							<?php the_content(); ?>
+			 			</div>
 
 					</article>
 
@@ -23,9 +29,6 @@
 				<?php endif; ?>
 			</div>
 
-			<div class="col-sm-4 col-md-offset-1">
-				<?php get_sidebar(); ?>
-			</div>
 
 		</div>
 	</div>

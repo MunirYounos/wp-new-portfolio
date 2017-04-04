@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Page-photos
+ * Template Name: Page-photo
  * @since 1.1.0
  **/
 
@@ -37,9 +37,7 @@ if( $query -> have_posts()){  ?>
                  </header>
                  <div class="grid__caption-content">
                      <p><?php echo the_excerpt(); ?></p>
-                     <div class="grid__caption-btn">
-                     <div class="grid__caption-btn"href="<?php echo the_permalink(); ?>"></div>
-                     </div>
+                     <div class="grid__caption-content-btn"href="<?php echo the_permalink(); ?>">Read full story <i class="fa fa-caret-right"></i></div>
                  </div>
                </div>
              </a>

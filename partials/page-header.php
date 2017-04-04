@@ -26,26 +26,12 @@ if ( is_category() ) {
  * Get header background
  **/
 
-$background = get_field('page_hero', $id) ?: get_field('page_hero', 'options');
-$cv_english = get_field('cv_english', 'options');
-$cv_danish = get_field('cv_danish', 'options');
-$cv_e_text = get_field('cv_e_text', 'options');
-$cv_d_text = get_field('cv_d_text', 'options');
 ?>
 
-<header class="page__header" role="banner" style="background-image: url(<?= $background['url']; ?>);">
+<header class="page__header" role="banner">
 	<div class="container">
-
 		<?php if ( is_front_page() ) : ?>
 			<h2 class="page__title"><?= $title; ?></h2>
-			<div class="page__cv col-sm-12">
-				<div class="page__cv--btn">
-					<a class="btn page__cv--btn-outline" href="<?php echo $cv_english['url']; ?>" target="_blank"><?php echo $cv_e_text; ?><i class="page__cv--btn-outline-fa fa fa-arrow-circle-down" aria-hidden="true"></i></a>
-				</div>
-				<div class="page__cv--btn">
-					<a class="btn page__cv--btn-outline" href="<?php echo $cv_danish['url']; ?>" target="_blank"><?php echo $cv_d_text; ?><i class="page__cv--btn-outline-fa fa fa-arrow-circle-down" aria-hidden="true"></i></a>
-				</div>
-			</div>
 		<?php else : ?>
 			<h1 class="page__title"><?= $title; ?></h1>
 		<?php endif; ?>

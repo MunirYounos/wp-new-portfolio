@@ -39,9 +39,7 @@ $query = new WP_query ($args);?>
                 </header>
                 <div class="posts__caption-content">
                     <p><?php echo the_excerpt(); ?></p>
-                    <div class="posts__caption-btn">
-                    <div class="posts__caption-btn"href="<?php echo the_permalink(); ?>"></div>
-                    </div>
+                     <div class="grid__caption-content-btn"href="<?php echo the_permalink(); ?>">Read more <i class="fa fa-caret-right"></i></div>
                 </div>
               </div>
             </a>

@@ -16,7 +16,11 @@
   &__portrait{
       display: inline-block;
       border: .5rem solid $light_black;
+      margin-left: 1.5rem;
+      @include mq(md){
       margin-left: 8rem;
+
+      }
 
   }
   &__image{

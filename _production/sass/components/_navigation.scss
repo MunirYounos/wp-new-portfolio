@@ -32,7 +32,7 @@ $nav-mobile-dropdown-bg: $light_black;
 		text-transform: uppercase;
 
 		@include mq(sm) {
-			padding: 1rem 2.5rem;
+			padding: 1rem 2rem;
 			margin-left: 1.5rem;
 
 			&:after{
@@ -116,8 +116,8 @@ $nav-mobile-dropdown-bg: $light_black;
 			height: calc(100% - #{$nav-header-height});
 			width: 100%;
 			transform: translateX(-100%);
-			transition: all .3s ease;
-			background: $gray-light;
+			transition: all .6s ease;
+			background: $offwhite;
 			overflow-y: auto;
 			-webkit-overflow-scrolling: touch;
 
@@ -147,7 +147,7 @@ $nav-mobile-dropdown-bg: $light_black;
 		display: block;
 		position: absolute;
 		z-index: 9999;
-		top: 50%;
+		top: 30%;
 		right: 1.5rem;
 		transform: translateY(-49.9%);
 		padding-top: 1.1rem;
