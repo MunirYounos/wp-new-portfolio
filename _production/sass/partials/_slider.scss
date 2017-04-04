@@ -14,10 +14,17 @@
 
 	&__left, &__right{
 		font-size: 2rem;
-		background: $white;
+		background: $green;
+		color: $white;
 		padding: .5rem 1rem;
-		border: .1rem solid $light_black;
+		border: .1rem solid $white;
 		cursor: pointer;
+		transition: 1s ease all;
+		&:hover{
+			background: $white;
+			color: $light_black;
+			border: .1rem solid $green;
+		}
 	}
 
 
@@ -54,8 +61,15 @@
 			margin-top: 4rem;
 			padding: .5rem 3rem;
 			position: relative;
-			background: $white;
-			border: .1rem solid $light_black;
+			background: $green;
+			color: $white;
+			border: .1rem solid $white;
+			transition: 1s ease all;
+			&:hover{
+				background: $white;
+				color: $light_black;
+				border: .1rem solid $green;
+			}
 
 			&-ar{
 				position: absolute;

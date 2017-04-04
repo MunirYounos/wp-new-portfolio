@@ -55,7 +55,6 @@ jQuery(document).ready(function($){
 
 
 
-
 	/**
 	 * Slider
 	 **/
@@ -114,14 +113,7 @@ jQuery(document).ready(function($){
 				},
 		});
 	};
-	/**
-	 * grid - masonry
-	 **/
 
-	$('.grid').masonry({
-	  itemSelector: '.grid-item',
-	  columnWidth:280
-	});
 
 	/**
 	 * Gallery - Fancybox

@@ -3,6 +3,7 @@
   margin-top: 12rem;
 
 
+
   &__title{
     font-size: 3.5rem;
     font-weight: 700;
@@ -12,16 +13,13 @@
     padding: 6rem 0;
 
   }
-  &__border{
-
-  }
   &__portrait{
       display: inline-block;
       border: .5rem solid $light_black;
-      margin-left: 2rem;
+      margin-left: 8rem;
+
   }
   &__image{
-    transform: translate(10%, 10%);
     transition: .5s ease all;
     &:hover{
       @include shadow;
@@ -34,11 +32,12 @@
     text-transform: uppercase;
     font-weight: 700;
     padding-bottom: 2rem;
-    padding-top: 2rem;
+
   }
   &__text{
     font-size: 1.4rem;
     font-weight: 300;
+
   }
 
   &__cv{
@@ -48,15 +47,19 @@
       font-size: 1.2rem;
       font-weight: 300;
       text-transform: uppercase;
-      border: .1rem solid $light_black;
+      border: .1rem solid $white;
       margin-top: 2rem;
-      background: $white;
+      background: $green;
+      color: $white;
       padding: .2rem 1rem;
       transition: .5s ease all;
+      margin-bottom: 4rem;
 
       &:hover{
-        background: $light_black;
-        color: $white;
+        background: $white;
+        color: $light_black;
+        border: .1rem solid $green;
+
       }
     }
   }
@@ -65,60 +68,38 @@
     font-size: 1.5rem;
     font-weight: 300;
     padding-top: 2rem;
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
   }
 
-  &__progress{
-    overflow: hidden;
-    height: .2rem;
-    margin-bottom: 1rem;
-    background-color: $white;
-    &-bar{
-      background: $light_black;
-      color: $white;
-      font-size: 1rem;
-      padding-bottom: .5rem;
-      font-weight: 300;
-    }
-  }
-
-  &__icon{
-      display: block;
-      &-text small, i{
-        font-size: 1.2rem;
-        font-weight: 400;
-      }
-      &-accomplished{
-      background: $light_black;
-      color: $white;
-      font-size: 1.2rem;
-      font-weight: 400;
-    }
-    &-image{
-      box-sizing: border-box;
-      max-width: 90%;
-      padding: 1rem;
-
-    }
-  }
 
   &__skills-title{
     text-transform: uppercase;
     font-size: 1.1rem;
+    padding: 2rem 0;
     font-weight: 700;
+    color: $light_black;
   }
   &__logos{
     background: $white;
-    border-bottom: .1rem solid $offwhite;
     padding-top: 1rem;
+    border-bottom: .2rem solid $offwhite;
+  }
+  &__logo{
+    padding-left:2.5rem;
+    @include mq($until: md){
+    padding-left: 3rem;
+    }
+    @include mq($until: sm){
+    padding-left: 1rem;
+    }
   }
 
   &__devicon{
     font-size: 4rem;
-    color: $gray;
+    color: $offwhite;
     transition: 1s ease all;
     &:hover{
-      color: $light_black;
+      color: $green;
     }
   }
 }
@@ -131,11 +112,18 @@
 }
 
 .bar {
-  flex: 1 1 25%;
+  flex: 1 1 8%;
   text-align: center;
+  @include mq($until: md){
+    flex: 1 1 16%;
+  }
+  @include mq($until: sm){
+    flex: 1 1 25%;
+  }
+
 }
 
 .bar-circle {
 	display: block;
-  margin: 2rem auto;
+  margin: 1rem auto;
 }

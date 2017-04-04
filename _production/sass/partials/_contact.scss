@@ -10,7 +10,7 @@
 	width: 100% !important;
 	&-submit {
 		color:$white;
-		background: lighten($gray, 20%);
+		background: $green;
     border:none;
 		border-bottom: .1rem solid lighten($gray, 30%);
 		padding: 1rem 0;

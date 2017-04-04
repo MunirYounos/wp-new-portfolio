@@ -17,7 +17,7 @@
     padding: .3rem 2rem;
     color: $light_black;
     background: $white;
-    border: .1rem solid rgba($light_black, .5);
+    border: .1rem solid $green;
     margin: .5rem;
     margin-right: .5rem;
     font-size: 1.2rem;
@@ -27,8 +27,7 @@
     transition: 1s ease all;
 
     &:hover{
-      background: $light_black;
-      color: $white;
+      background: $green;
       border: .1rem solid $gray-light;
     }
   }
@@ -65,9 +64,8 @@
   }
 
   &-control-active{
-    background: $light_black;
+    background: $green;
     color: $white;
-    border: .1rem solid $gray;
 
   }
 

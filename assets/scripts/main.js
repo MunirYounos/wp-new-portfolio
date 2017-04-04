@@ -4067,9 +4067,9 @@ l.data=s,c!==l.dom.el&&(l.isInDom&&(l.unbindEvents(),a.dom.parent.replaceChild(c
 
 			self.diff = ( ( self.loaded / 100 ) * Math.PI * 2 * 10 ).toFixed( 2 );
 			self.context.clearRect( 0, 0, self.width, self.height );
-			self.context.lineWidth = 4;
-			self.context.fillStyle = "#222";
-			self.context.strokeStyle = "#242426";
+			self.context.lineWidth = 2;
+			self.context.fillStyle = "#242426";
+			self.context.strokeStyle = "#98cb2b";
 			self.context.textAlign = "center";
 
 			self.context.fillText( self.loaded + "%", self.width * .5, self.height * .5 + 2, self.width );
@@ -4187,7 +4187,6 @@ jQuery(document).ready(function($){
 
 
 
-
 	/**
 	 * Slider
 	 **/
@@ -4246,14 +4245,7 @@ jQuery(document).ready(function($){
 				},
 		});
 	};
-	/**
-	 * grid - masonry
-	 **/
 
-	$('.grid').masonry({
-	  itemSelector: '.grid-item',
-	  columnWidth:280
-	});
 
 	/**
 	 * Gallery - Fancybox

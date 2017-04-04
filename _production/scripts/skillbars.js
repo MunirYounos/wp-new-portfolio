@@ -30,9 +30,9 @@
 
 			self.diff = ( ( self.loaded / 100 ) * Math.PI * 2 * 10 ).toFixed( 2 );
 			self.context.clearRect( 0, 0, self.width, self.height );
-			self.context.lineWidth = 4;
-			self.context.fillStyle = "#222";
-			self.context.strokeStyle = "#242426";
+			self.context.lineWidth = 2;
+			self.context.fillStyle = "#242426";
+			self.context.strokeStyle = "#98cb2b";
 			self.context.textAlign = "center";
 
 			self.context.fillText( self.loaded + "%", self.width * .5, self.height * .5 + 2, self.width );
