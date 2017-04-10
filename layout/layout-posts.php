@@ -30,6 +30,7 @@ $query = new WP_query ($args);?>
         <div class="col-xs-12 col-sm-3 col-md-3 posts__gutters">
           <div class="posts__wrapper">
             <a class="posts__boxlink" href="/portfolio/photo/.php?page_id=808 ?>">
+            
               <?php echo the_post_thumbnail(); ?>
               <div class="posts__caption">
                 <header class="posts__caption-header">
