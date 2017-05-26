@@ -162,7 +162,7 @@ html {
 body {
   height: 100%;
   font-size: 1.6rem;
-  font-family: "anisette-petite";
+  font-family: "mic-32-new-web", sans-serif;
   line-height: 1.5;
   font-weight: 400;
   color: #000;
@@ -177,7 +177,7 @@ body {
  * Base typography
  * ================================================== */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "anisette-petite";
+  font-family: "source-code-pro", monospace;
   color: #000;
   -webkit-hyphens: auto;
       -ms-hyphens: auto;

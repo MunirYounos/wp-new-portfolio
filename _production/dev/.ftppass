@@ -2,7 +2,7 @@
   "dev": {
     "host": "ftp.multimunir.com",
     "username": "multimunir.com",
-    "password": "multimediamunir"
+    "password": "2DomainDomain"
   },
   "live": {
     "host": "",
