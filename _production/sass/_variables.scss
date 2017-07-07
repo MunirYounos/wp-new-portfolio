@@ -4,17 +4,21 @@
 
 $black: #000;
 $white: #fff;
-$offwhite:#f1f1f1;
-$light_black:#242426;
+$offwhite:#eaeae1;
+$light_black:#252525;
+$gold_dark:#d5ac55;
+$gold_light:#f8cd8b;
+$gold_mediam:#e4b341;
 $green:#98cb2b;
 $gray:#888888;
 $gray-dark:#555;
 $gray-light:#ccc;
 $cream:#ded0c3;
+$offred: indianred;
 
 
 $colour-text: $black;
-$colour-heading: $black;
+$colour-heading: $light_black;
 
 
 /**
@@ -31,8 +35,8 @@ $section-themes: (
  * Fonts
  **/
 
-$body: "mic-32-new-web",sans-serif;
-$heading: "source-code-pro",monospace;
+$body: "Open Sans Condensed",sans-serif;
+$heading: "Open Sans Condensed",sans-serif;
 
 
 
@@ -49,7 +53,7 @@ $z-nav-mobile: 800;
  * Mobile navigation toggle
  **/
 
-$toggle-bg: $black;
+$toggle-bg: $gold_dark;
 $toggle-label-color: $toggle-bg;
 $toggle-height: .3rem;
 $toggle-width: 2.5rem;

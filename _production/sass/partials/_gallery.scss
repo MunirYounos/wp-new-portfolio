@@ -1,56 +1,40 @@
 /**
  * Gallery
  **/
-
-$gallery-spacing: 1rem;
-
+#gallery{
+	margin-top: 5rem;
+	margin-bottom: 4rem;
+}
 .gallery {
-
-	&__list {
-		display: flex;
-		flex-flow: row wrap;
-	}
-
-	&__item {
-		width: 100%;
-		height: auto;
-		padding: $gallery-spacing / 2;
-
-		@include mq(320px) {
-			width: percentage(1/1);
-		}
-
-		@include mq(xs) {
-			width: percentage(1/2);
-		}
-
-		@include mq(md) {
-			width: percentage(1/2);
-		}
-
-		@include mq(lg) {
-			width: percentage(1/4);
-		}
-	}
-
-	&__link {
-		@include gallery-overlay(
-			$background: rgba($light_black, .5),
-			$icon: '\f08e',
-			$color: $white,
-			$font-size: 1.6rem
-		);
-	}
-
-	&__title{
-		text-align: center;
-		font-size: 3.5rem !important;
-		color: $light_black;
+	&__h{
+		color: $gold_dark;
+		font-size: 3.4rem;
 		font-weight: 700;
-		padding-top: 10rem;
-		padding-bottom: 4rem;
+		padding: 10rem auto;
+		text-align: center;
+		text-transform: uppercase;
+		@include mq($until: xs){
+			font-size: 2.2rem;
+			padding: 5rem auto;
+		}
 	}
-	&__caption {
-
+	&__p{
+		text-align: center;
+		padding: 1rem 0rem;
+	}
+	&__wrap{
+	padding: 0rem .2rem;
+	margin: 2px 0px;
+	}
+	&__image{
+		background: $white;
+		& img{
+			width: 100%;
+			display: block;
+			@include mq($until: md){
+				width: 50%;
+				margin-left: 25%;
+			}
+		}
 	}
 }

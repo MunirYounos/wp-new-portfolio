@@ -20,15 +20,8 @@ module.exports = function(grunt) {
 
 	// JavaScript files for concatenation
 	var concatScripts = [
-		'<%= path.devAssets %>/scripts/leafMedia.dropdown.js',
-		'<%= path.devAssets %>/scripts/blazy.js',
-		'<%= path.devAssets %>/scripts/jquery.fancybox.pack.js',
-		'<%= path.devAssets %>/scripts/jquery.fancybox.thumbs.js',
+		'<%= path.devAssets %>/scripts/jquery-3.2.1.js',
 		'<%= path.devAssets %>/scripts/jquery.owl-carousel.js',
-		'<%= path.devAssets %>/scripts/leafMedia.google-maps.js',
-		// '<%= path.devAssets %>/scripts/jquery.smartresize.js',
-		'<%= path.devAssets %>/scripts/mixitup.min.js',
-		'<%= path.devAssets %>/scripts/skillbars.js',
 		'<%= path.devAssets %>/scripts/main.js',
 	];
 
@@ -193,7 +186,7 @@ module.exports = function(grunt) {
 					authKey: 'dev'
 				},
 				src: '<%= path.root %>',
-				dest: 'portfolio/wp-content/themes/leafMedia/',
+				dest: 'gruntproject',
 				simple: true,
 				exclusions: [
 					'_production',
@@ -209,7 +202,7 @@ module.exports = function(grunt) {
 					authKey: 'live'
 				},
 				src: '<%= path.root %>',
-				dest: 'portfolio/wp-content/themes/leafMedia/',
+				dest: 'gruntproject',
 				simple: true,
 				exclusions: [
 					'_production',

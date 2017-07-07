@@ -26,21 +26,26 @@ $nav-mobile-dropdown-bg: $light_black;
 		padding: 1.5rem;
 		line-height: 1;
 		white-space: nowrap;
-		color: $black;
+		color: $light_black;
 		font-size: 1.2rem;
 		font-weight: 500;
+		letter-spacing: .3rem;
 		text-transform: uppercase;
-
+		&:hover{
+			text-decoration: none;
+			color:$light_black;
+		}
 		@include mq(sm) {
 			padding: 1rem 2rem;
 			margin-left: 1.5rem;
+			color:$light_black;
 
 			&:after{
 				content: '';
 				position: absolute;
 				top: 80%;
 				left: 3.5rem;
-				background: $green;
+				background: $gold_dark;
 				width: calc(100% - 5.5rem);
 				height: .2rem;
 				transition: .6s ease all;
@@ -52,7 +57,7 @@ $nav-mobile-dropdown-bg: $light_black;
 		.is-active > &,
 		&:hover {
 			@include mq($until: sm) {
-				background: $white;
+				background: $offred;
 				color: $light_black;
 			}
 
@@ -153,6 +158,9 @@ $nav-mobile-dropdown-bg: $light_black;
 		padding-top: 1.1rem;
 		padding-bottom: 1.1rem;
 		cursor: pointer;
+		@include mq($until: sm){
+			display: none !important;
+		}
 
 
 		&__label {

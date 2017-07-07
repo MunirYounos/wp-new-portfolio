@@ -1,3 +1,5 @@
+
+
 /**
  * Slider
  **/
@@ -6,40 +8,52 @@
 	background: $offwhite;
 	display: block;
 	width: 100%;
-	height: 60rem;
+	position: relative;
+	margin: .1rem 0rem .5rem 0rem;
 
-	@include mq($until: md){
-		height: 80rem;
+	// @include mq($until: md){
+	// 	height: 32rem;
+	// }
+
+	&__list{
+		width: 100%;
 	}
-
-	&__left, &__right{
-		font-size: 2rem;
-		background: $green;
-		color: $white;
-		padding: .5rem 1rem;
-		border: .1rem solid $white;
-		cursor: pointer;
-		transition: 1s ease all;
-		&:hover{
-			background: $white;
-			color: $light_black;
-			border: .1rem solid $green;
-		}
-	}
-
-
 	&__cta{
 		display: block;
 		padding-bottom: 8.4rem;
+		max-width: 400px;
+		position: absolute;
+		top: 10%;
+		left: 5%;
+		@include mq($until: xs){
+			display: none;
+		}
+		&-btn{
+			color: $gold_dark;
+			border: 1px solid $gold_dark;
+			padding: .4rem 2.2rem;
+			margin-top: 3rem;
+			font-weight: 100;
+			border-radius: 0px;
+		}
 
 		&-title{
 			font-size: 3.5rem;
-			padding-top: 10rem;
+			padding-top: 6rem;
 			padding-bottom: 4rem;
 			font-weight: 700;
 			display: block;
+			word-wrap: break-word;
+			text-transform: uppercase;
 			width: 100%;
-			color: $light_black;
+			color: $gold_dark;
+
+			@include mq($until: md){
+				font-size: 2.4rem;
+				padding-top: 3rem;
+				padding-bottom: 2rem;
+
+			}
 		}
 
 		&-caption{
@@ -49,53 +63,35 @@
 			background: transparent;
 
 			@include mq($until: md){
-				padding-left: 1rem;
+				padding-left: 2rem;
 			}
 		}
 
-		&-btn{
-			text-transform: uppercase;
-			color: $light_black;
-			font-weight: 400;
-			font-size: 1.4rem;
-			margin-top: 4rem;
-			padding: .5rem 3rem;
-			position: relative;
-			background: $green;
-			color: $white;
-			border: .1rem solid $white;
-			transition: 1s ease all;
-			&:hover{
-				background: $white;
-				color: $light_black;
-				border: .1rem solid $green;
-			}
 
-			&-ar{
-				position: absolute;
-				top: 16%;
-				left: 10.5rem;
-				font-size: 2rem;
-			}
+
 		}
 
-	}
+
 	&__wrap{
 		position: relative;
+		width: 100%;
 	}
 
 
 	&__item {
 		display: flex;
 		align-items: center;
+		justify-content: center;
 		z-index: 255;
 		width: 100%;
 		overflow: hidden;
 		box-sizing: border-box;
 		background: no-repeat center center;
 		background-size: cover;
-		padding-bottom: 10rem;
-
+		padding-bottom: 0rem;
+		& img{
+			width: 100%;
+		}
 
 		&:before {
 			content: '';
@@ -116,8 +112,8 @@
 	&__caption {
 
 	}
-}
 
+}
 
 /**
  * Owl Carousel core
@@ -153,6 +149,7 @@
 		position: relative;
 		min-height: 1px;
 		float: left;
+		width: 100%;
 		-webkit-backface-visibility: hidden;
 		-webkit-tap-highlight-color: transparent;
 		-webkit-touch-callout: none;
@@ -169,15 +166,42 @@
 		display: block;
 		width: 100%;
 		position: absolute;
-		top: 45%;
+		top: 42%;
 		left: 0;
 	}
-	.owl-nav .owl-prev,
-	.owl-nav .owl-next{
-		width: 100%;
+	.owl-nav .owl-prev,.owl-nav .owl-next{
+		display: inline-block;
+		font-size: 3rem;
+		font-weight: 100;
+		background: $offwhite;
+		color: $gold_dark;
+		cursor:pointer;
+		padding: 1.2rem 2.8rem;
+		border-radius: 50%;
+		transition: 1s ease all;
+		&:hover{
+			background: lighten($offwhite,15%);
+		}
+
+		@include mq($until: xs){
+			padding: .3rem 1.4rem;
+			font-size: 1.8rem;
+		}
 
 	}
-
+  .owl-nav .owl-next{
+		float: right;
+		margin-right: -3rem;
+		@include mq($until: xs){
+			margin-right: -2rem;
+		}
+	}
+  .owl-nav .owl-prev{
+		margin-left: -3rem;
+		@include mq($until: xs){
+			margin-left: -2rem;
+		}
+	}
 	.owl-dot {
 		cursor: pointer;
 		cursor: hand;

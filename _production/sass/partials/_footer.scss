@@ -1,40 +1,56 @@
+.contact{
+	padding: 1rem 0rem;
+
+}
 .footer {
-		background: $offwhite;
 		height: auto;
-		text-align: center;
-		padding: 6rem 0;
-		&__top{
-			display: inline-block;
-			border: .1rem solid $light_black;
-			background: $white;
-			color: $light_black;
-			cursor: pointer;
-			opacity: .7;
-			margin-top: 3rem;
-			padding: .5rem 1.6rem;
-			font-size: 2rem;
-			transition: 1s ease all;
-			&:hover{
-				color: $white;
-				background: $light_black;
-			}
+		padding: 2rem 4rem 12rem 4rem;
+		background: $offwhite;
+		margin-bottom: 10rem;
+		display: block;
+		position: relative;
+		@include mq($until: xs){
+			margin-bottom: 0rem
 		}
-
-		&__logo{
-			display: block;
-			margin: 0 auto;
-			width: 6rem;
-			padding-top: 3rem;
-		}
-		&__name{
-			text-transform: uppercase;
-			font-size: 1.4rem;
+		& h2{
+			color: $gold_dark;
+			font-size: 2.2rem;
 			font-weight: 700;
-
+			padding: 1rem 0rem;
 		}
-		&__date{
+		&__copy p{
+			text-align: center;
+			text-transform: capitalize;
 			font-size: 1.2rem;
 			font-weight: 400;
+			letter-spacing: .2rem;
+			line-height: 1.2rem;
+			position: relative;
+			padding: 5rem;
 		}
+		&__copy hr{
+			background: rgba($black, 0.5);
+		}
+		&__input{
+			width: 100%;
+			border: .1rem solid rgba($gray,0.5);
+			color: $gray;
+			padding: .4rem;
+			margin: .1rem 0rem;
 
+		}
+}
+.footer__copy-btn{
+	margin-left: 36%;
+	background: $gold_dark;
+	padding: 1rem;
+	border: 1px solid $gray;
+	color: $white;
+	text-decoration: none;
+	transition: 1s ease all;
+	list-style: none;
+	&:hover{
+		background: $white;
+		color: $gold_dark;
+	}
 }

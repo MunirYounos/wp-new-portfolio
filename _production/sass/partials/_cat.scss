@@ -1,0 +1,38 @@
+//category section
+#cat{
+  margin-top: 5rem;
+}
+.cat{
+  padding:0px 2px;
+  margin: 0px;
+  &__wrap{
+    background: $white;
+    padding: 2rem 4rem;
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow: 1px 1px 8px 1px rgba($gray-light,0.6);
+    transition: 1s ease all;
+    & img{
+      width: 100%;
+      display: block;
+      @include mq($until: md){
+        width: 50%;
+        margin-left: 25%;
+      }
+    }
+    & h2{
+      color: $gold_dark;
+      font-size: 1.6rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      transition: 1s ease all;
+    }
+    &:hover{
+      background: lighten($offwhite, 5%);
+      .slider__cta-btn{
+        background: lighten($gold_dark, 10%);
+        color: $white;
+      }
+    }
+  }
+}
